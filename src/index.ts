@@ -1,7 +1,9 @@
-import { throttle } from "./utils/throttle"
+import { throttle } from "./utils/throttle";
 
 const handleScrollAnimation = (): void => {
-  const entries: Array<Element> = Array.from(document.getElementsByClassName("block"));
+  const entries: Array<Element> = Array.from(
+    document.getElementsByClassName("block")
+  );
   entries.forEach((element, index) => {
     if (isInViewport(element)) {
       if (
@@ -30,3 +32,5 @@ let res = throttle(handleScrollAnimation, 100);
 window.addEventListener("scroll", (): void => {
   res();
 });
+
+console.log("afsfsa");

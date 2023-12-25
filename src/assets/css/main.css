@@ -1,12 +1,30 @@
-*
-{
-    padding: 0;
-    margin: 0;
+* {
+  padding: 0;
+  margin: 0;
 }
 
-.block
-{
-    background-color: red;
-    width: 100%;
-    height: 20rem;
+.block {
+  background-color: red;
+  width: 100%;
+  height: 20rem;
+}
+.block-hide {
+  opacity: 0;
+}
+@media (prefers-reduced-motion: no-preference) {
+  @media (prefers-reduced-motion: no-preference) {
+    .block-animation {
+      animation: enter 1s 1;
+    }
+  }
+  @keyframes enter {
+    0% {
+      transform: translateY(-20%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0%);
+      opacity: 1;
+    }
+  }
 }
