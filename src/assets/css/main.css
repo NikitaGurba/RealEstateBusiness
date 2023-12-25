@@ -1,0 +1,12 @@
+*
+{
+    padding: 0;
+    margin: 0;
+}
+
+.block
+{
+    background-color: red;
+    width: 100%;
+    height: 20rem;
+}
