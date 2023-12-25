@@ -1,9 +1,16 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+require('dotenv').config()
 
 module.exports = {
   entry: ["./src/index.ts", "./src/assets/scss/main.scss", "./src/assets/css/main.css"],
+  mode: process.env.APP_MODE,
+  watch: true,
+  watchOptions: {
+    aggregateTimeout: 200,
+    poll: 1000,
+  },
   module: {
     rules: [
       {
