@@ -224,3 +224,128 @@ body {
   border-radius: 0.625rem;
   border: 1px solid var(--Grey-15, #262626);
 }
+.standard-block-left {
+  display: flex;
+  width: 80rem;
+  align-items: center;
+  gap: 3.125rem;
+}
+.standard-block-left__container-right {
+  display: flex;
+  padding: 0.625rem;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.625rem;
+  flex: 1 0 0;
+  border-radius: 0.75rem;
+  background: var(--Grey-10, #1a1a1a);
+}
+.standard-block-left__container-left {
+  display: flex;
+  width: 25.75rem;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2.5rem;
+  flex-shrink: 0;
+}
+.standard-block-left__title-with-paragraph {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.625rem;
+  align-self: stretch;
+}
+.standard-block-left__title-with-paragraph__title {
+  align-self: stretch;
+  color: var(--Absolute-White, #fff);
+  font-family: Urbanist;
+  font-size: 2.375rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 150%; /* 3.5625rem */
+}
+.standard-block-left__card {
+  display: flex;
+  padding: 2.5rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1.25rem;
+  align-self: stretch;
+  border-radius: 0.625rem;
+  border: 1px solid var(--Grey-15, #262626);
+  background: var(--Grey-10, #1a1a1a);
+  background-image: url("assets/img/CardBackground.png");
+}
+.standard-block-left__title-with-paragraph__title {
+  align-self: stretch;
+  color: var(--Absolute-White, #fff);
+  font-family: Urbanist;
+  font-size: 2.375rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 150%; /* 3.5625rem */
+}
+.standard-block-left__title-with-paragraph__paragraph {
+  align-self: stretch;
+  color: var(--Grey-60, #999);
+  font-family: Urbanist;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 150%; /* 1.5rem */
+}
+.standard-block-left__card-title-with-paragraph-title {
+  align-self: stretch;
+  color: var(--Absolute-White, #fff);
+  font-family: Urbanist;
+  font-size: 1.375rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 150%; /* 2.0625rem */
+}
+.standard-block-left__card-paragraph {
+  align-self: stretch;
+  color: var(--White-90, #e4e4e7);
+  font-family: Urbanist;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 150%; /* 1.5rem */
+}
+.standard-block-left__card-button {
+  display: flex;
+  padding: 0.875rem 1.25rem;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  align-self: stretch;
+}
+.standard-block-left__container-right {
+  display: flex;
+  padding: 0.625rem;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.625rem;
+  flex: 1 0 0;
+  border-radius: 0.75rem;
+  background: var(--Grey-10, #1a1a1a);
+}
+.standard-block-left__card-icon-left {
+  display: flex;
+  padding: 2.5rem;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.5rem;
+  flex: 1 0 0;
+  border-radius: 0.625rem;
+  border: 1px solid var(--Grey-15, #262626);
+  background: var(--Grey-08, #141414);
+}
+.standard-block-left__container-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.625rem;
+  align-self: stretch;
+}
