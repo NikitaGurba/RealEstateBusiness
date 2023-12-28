@@ -1,0 +1,87 @@
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono&family=Roboto&family=Urbanist&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+.card-icon-center {
+  display: flex;
+  padding: 1.875rem 1rem;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  flex: 1 0 0;
+  border-radius: 0.625rem;
+  border: 1px solid var(--Grey-15, #262626);
+  background: var(--Grey-10, #1a1a1a);
+}
+.card-icon-center__outer-icon-container {
+  display: flex;
+  padding: 1px;
+  align-items: center;
+  gap: 0.625rem;
+  border-radius: 6.25rem;
+  border: 1px solid transparent; /*2*/
+  background: linear-gradient(
+    45deg,
+    rgba(166, 133, 250, 1) 0%,
+    rgba(166, 133, 250, 0) 40%,
+    rgba(166, 133, 250, 0) 60%,
+    rgba(166, 133, 250, 1) 100%
+  );
+  -webkit-mask: /*4*/ linear-gradient(#fff 0 0) padding-box,
+    linear-gradient(transparent 0 0);
+  -webkit-mask-composite: xor; /*5'*/
+  mask-composite: exclude; /*5*/
+}
+.card-icon-center__inner-icon-container {
+  display: flex;
+  padding: 1px;
+  align-items: center;
+  gap: 0.625rem;
+  border-radius: 6.25rem;
+  border: 1px solid transparent; /*2*/
+  background: linear-gradient(
+    135deg,
+    rgba(166, 133, 250, 1) 0%,
+    rgba(166, 133, 250, 0) 30%,
+    rgba(166, 133, 250, 0) 70%,
+    rgba(166, 133, 250, 1) 100%
+  );
+  -webkit-mask: /*4*/ linear-gradient(#fff 0 0) padding-box,
+    linear-gradient(transparent 0 0);
+  -webkit-mask-composite: xor; /*5'*/
+  mask-composite: exclude; /*5*/
+}
+.card-icon-center__outer-icon-container_mask {
+  background-color: #1a1a1a;
+  padding: 0.5rem;
+  border-radius: 6.25rem;
+  display: flex;
+  align-items: center;
+}
+.card-icon-center__inner-icon-container_mask {
+  background-color: #1a1a1a;
+  padding: 0.625rem;
+  border-radius: 6.25rem;
+  display: flex;
+  align-items: center;
+}
+
+.card-icon-center__text {
+  align-self: stretch;
+  color: var(--Absolute-White, #fff);
+  text-align: center;
+  font-family: Urbanist;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 150%; /* 1.5rem */
+}
+.card-icon-center__icon-right {
+  width: 1.625rem;
+  height: 1.625rem;
+  position: absolute;
+  right: 1.21875rem;
+  top: 1.25rem;
+}
