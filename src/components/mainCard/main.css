@@ -1,0 +1,41 @@
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono&family=Roboto&family=Urbanist&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background: var(--Grey-08, #141414);
+}
+.container {
+  display: flex;
+  padding: 6.25rem 12.5rem 6.25rem 5rem;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.625rem;
+  align-self: stretch;
+  border-bottom: 1px solid var(--Grey-15, #262626);
+  background: linear-gradient(
+    96deg,
+    #262626 -26.82%,
+    rgba(38, 38, 38, 0) 40.46%
+  );
+}
+.title-with-paragraph__title {
+  align-self: stretch;
+  color: var(--Absolute-White, #fff);
+  font-family: Urbanist;
+  font-size: 2.375rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 150%; /* 3.5625rem */
+}
+.title-with-paragraph__paragraph {
+  align-self: stretch;
+  color: var(--Grey-60, #999);
+  font-family: Urbanist;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 150%; /* 1.5rem */
+}

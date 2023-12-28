@@ -28,6 +28,7 @@
 .text-button {
   background: none;
   border: none;
+  cursor: pointer;
 }
 .text-button span,
 .button span {
@@ -39,6 +40,7 @@
   line-height: 150%; /* 1.3125rem */
 }
 .button {
+  cursor: pointer;
   display: flex;
   padding: 0.75rem 1.25rem;
   align-items: flex-start;
