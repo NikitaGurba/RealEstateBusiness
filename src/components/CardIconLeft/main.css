@@ -81,7 +81,7 @@ body {
   font-weight: 600;
   line-height: 150%; /* 1.5rem */
 }
-.card-icon-left__paraghraph {
+.card-icon-left__paragraph {
   align-self: stretch;
   color: var(--Grey-60, #999);
   font-family: Urbanist;

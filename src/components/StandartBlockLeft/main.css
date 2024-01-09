@@ -275,7 +275,7 @@ body {
   align-self: stretch;
   border-radius: 0.625rem;
   border: 1px solid var(--Grey-15, #262626);
-  background: var(--Grey-10, #141414);
+  background: var(--Grey-10, #1A1A1A);
   background-image: url("assets/img/CardBackground.png");
 }
 .standard-block-left__title-with-paragraph__title {
@@ -330,7 +330,7 @@ body {
   gap: 0.625rem;
   flex: 1 0 0;
   border-radius: 0.75rem;
-  background: var(--Grey-10, #141414);
+  background: var(--Grey-10, #1A1A1A);
 }
 .standard-block-left__card-icon-left {
   display: flex;
