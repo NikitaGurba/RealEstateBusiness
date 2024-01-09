@@ -10,10 +10,7 @@ if (showPopup !== "false" && popup !== undefined) {
 }
 const hidePopup = (): void => {
   if (popup !== undefined) {
-    popup.style.marginTop = -popup.getBoundingClientRect().height + "px";
-    popup__button.style.marginTop =
-      -popup.getBoundingClientRect().height + "px";
-    setTimeout(() => (popup.style.display = "none"), 500);
+    popup.className = 'popup hide-animation';
     localStorage.setItem("popup", "false");
   }
 };
