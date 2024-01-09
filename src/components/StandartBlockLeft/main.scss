@@ -1,11 +1,21 @@
 @import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono&family=Roboto&family=Urbanist&display=swap");
 
+$Background: #141414;
+$Grey-15: #262626;
+$Grey-08: #141414;
+$Grey-60: #999;
+$Absolute-White: #fff;
+$Absolute-Black: #000;
+$Grey-10: #1a1a1a;
+$Purple: #a685fa;
+$White-90: #e4e4e7;
+
 * {
   margin: 0;
   padding: 0;
 }
 body {
-  background-color: #141414;
+  background-color: $Background;
 }
 .title-with-paragraph {
   display: flex;
@@ -17,7 +27,7 @@ body {
 }
 .title-with-paragraph__title {
   align-self: stretch;
-  color: var(--Absolute-White, #fff);
+  color: $Absolute-White;
   font-family: Urbanist;
   font-size: 2.375rem;
   font-style: normal;
@@ -26,7 +36,7 @@ body {
 }
 .title-with-paragraph__paragraph {
   align-self: stretch;
-  color: var(--Grey-60, #999);
+  color: $Grey-60;
   font-family: Urbanist;
   font-size: 1rem;
   font-style: normal;
@@ -41,7 +51,7 @@ body {
   gap: 1.25rem;
   flex: 1 0 0;
   border-radius: 0.625rem;
-  border: 1px solid var(--Grey-15, #262626);
+  border: 1px solid $Grey-15;
 }
 .card-icon-left__outer-icon-container {
   width: fit-content;
@@ -53,12 +63,12 @@ body {
   border: 1px solid transparent; /*2*/
   background: linear-gradient(
     45deg,
-    rgba(166, 133, 250, 1) 0%,
-    rgba(166, 133, 250, 0) 40%,
-    rgba(166, 133, 250, 0) 60%,
-    rgba(166, 133, 250, 1) 100%
+    $Purple 0%,
+    transparent 40%,
+    transparent 60%,
+    $Purple 100%
   );
-  -webkit-mask: /*4*/ linear-gradient(#fff 0 0) padding-box,
+  -webkit-mask: /*4*/ linear-gradient($Absolute-White 0 0) padding-box,
     linear-gradient(transparent 0 0);
   -webkit-mask-composite: xor; /*5'*/
   mask-composite: exclude; /*5*/
@@ -72,25 +82,25 @@ body {
   border: 1px solid transparent; /*2*/
   background: linear-gradient(
     135deg,
-    rgba(166, 133, 250, 1) 0%,
-    rgba(166, 133, 250, 0) 30%,
-    rgba(166, 133, 250, 0) 70%,
-    rgba(166, 133, 250, 1) 100%
+    $Purple 0%,
+    transparent 30%,
+    transparent 70%,
+    $Purple 100%
   );
-  -webkit-mask: /*4*/ linear-gradient(#fff 0 0) padding-box,
+  -webkit-mask: /*4*/ linear-gradient($Absolute-White 0 0) padding-box,
     linear-gradient(transparent 0 0);
   -webkit-mask-composite: xor; /*5'*/
   mask-composite: exclude; /*5*/
 }
 .card-icon-left__outer-icon-container_mask {
-  background-color: #141414;
+  background-color: $Background;
   padding: 0.5rem;
   border-radius: 6.25rem;
   display: flex;
   align-items: center;
 }
 .card-icon-left__inner-icon-container_mask {
-  background-color: #141414;
+  background-color: $Background;
   padding: 0.625rem;
   border-radius: 6.25rem;
   display: flex;
@@ -99,7 +109,7 @@ body {
 
 .card-icon-left__text {
   align-self: stretch;
-  color: var(--Absolute-White, #fff);
+  color: $Absolute-White;
   text-align: center;
   font-family: Urbanist;
   font-size: 1rem;
@@ -107,9 +117,9 @@ body {
   font-weight: 600;
   line-height: 150%; /* 1.5rem */
 }
-.card-icon-left__paraghraph {
+.card-icon-left__paragraph {
   align-self: stretch;
-  color: var(--Grey-60, #999);
+  color: $Grey-60;
   font-family: Urbanist;
   font-size: 1rem;
   font-style: normal;
@@ -123,7 +133,7 @@ body {
   align-self: stretch;
 }
 .card-icon-left__text {
-  color: var(--Absolute-White, #fff);
+  color: $Absolute-White;
   font-family: Urbanist;
   height: fit-content;
   align-self: center;
@@ -132,7 +142,7 @@ body {
   font-weight: 600;
 }
 .button span {
-  color: var(--Absolute-White, #fff);
+  color: $Absolute-White;
   font-family: Urbanist;
   font-size: 0.875rem;
   font-style: normal;
@@ -146,8 +156,8 @@ body {
   align-items: flex-start;
   gap: 0.625rem;
   border-radius: 0.5rem;
-  border: 1px solid var(--Grey-15, #262626);
-  background: var(--Grey-08, #141414);
+  border: 1px solid $Grey-15;
+  background: $Background;
 }
 .standard-block {
   display: flex;
@@ -186,9 +196,9 @@ body {
   flex: 1 0 0;
   align-self: stretch;
   border-radius: 0.625rem;
-  border: 1px solid var(--Grey-15, #262626);
-  background: var(--Grey-10, #141414);
-  background-image: url("assets/img/CardBackground.png");
+  border: 1px solid $Grey-15;
+  background: $Background;
+  background-image: url("../assets/img/CardBackground.png");
 }
 .standard-block__card-container {
   display: flex;
@@ -198,7 +208,7 @@ body {
 }
 .standard-block__card-paragraph {
   align-self: stretch;
-  color: var(--Grey-60, #999);
+  color: $Grey-60;
   font-family: Urbanist;
   font-size: 1rem;
   font-style: normal;
@@ -207,7 +217,7 @@ body {
 }
 .standard-block__card-title-with-paragraph-title {
   flex: 1 0 0;
-  color: var(--Absolute-White, #fff);
+  color: $Absolute-White;
   font-family: Urbanist;
   font-size: 1.5rem;
   font-style: normal;
@@ -222,7 +232,7 @@ body {
   align-items: flex-start;
   gap: 1.25rem;
   border-radius: 0.625rem;
-  border: 1px solid var(--Grey-15, #262626);
+  border: 1px solid $Grey-15;
 }
 .standard-block-left {
   display: flex;
@@ -238,7 +248,7 @@ body {
   gap: 0.625rem;
   flex: 1 0 0;
   border-radius: 0.75rem;
-  background: var(--Grey-10, #141414);
+  background: $Background;
 }
 .standard-block-left__container-left {
   display: flex;
@@ -258,7 +268,7 @@ body {
 }
 .standard-block-left__title-with-paragraph__title {
   align-self: stretch;
-  color: var(--Absolute-White, #fff);
+  color: $Absolute-White;
   font-family: Urbanist;
   font-size: 2.375rem;
   font-style: normal;
@@ -274,13 +284,13 @@ body {
   gap: 1.25rem;
   align-self: stretch;
   border-radius: 0.625rem;
-  border: 1px solid var(--Grey-15, #262626);
-  background: var(--Grey-10, #1A1A1A);
-  background-image: url("assets/img/CardBackground.png");
+  border: 1px solid $Grey-15;
+  background: $Grey-10;
+  background-image: url("../assets/img/CardBackground.png");
 }
 .standard-block-left__title-with-paragraph__title {
   align-self: stretch;
-  color: var(--Absolute-White, #fff);
+  color: $Absolute-White;
   font-family: Urbanist;
   font-size: 2.375rem;
   font-style: normal;
@@ -289,7 +299,7 @@ body {
 }
 .standard-block-left__title-with-paragraph__paragraph {
   align-self: stretch;
-  color: var(--Grey-60, #999);
+  color: $Grey-60;
   font-family: Urbanist;
   font-size: 1rem;
   font-style: normal;
@@ -298,7 +308,7 @@ body {
 }
 .standard-block-left__card-title-with-paragraph-title {
   align-self: stretch;
-  color: var(--Absolute-White, #fff);
+  color: $Absolute-White;
   font-family: Urbanist;
   font-size: 1.375rem;
   font-style: normal;
@@ -307,7 +317,7 @@ body {
 }
 .standard-block-left__card-paragraph {
   align-self: stretch;
-  color: var(--White-90, #e4e4e7);
+  color: $White-90;
   font-family: Urbanist;
   font-size: 1rem;
   font-style: normal;
@@ -330,7 +340,7 @@ body {
   gap: 0.625rem;
   flex: 1 0 0;
   border-radius: 0.75rem;
-  background: var(--Grey-10, #1A1A1A);
+  background: $Grey-10;
 }
 .standard-block-left__card-icon-left {
   display: flex;
@@ -340,8 +350,8 @@ body {
   gap: 1.5rem;
   flex: 1 0 0;
   border-radius: 0.625rem;
-  border: 1px solid var(--Grey-15, #262626);
-  background: var(--Grey-08, #141414);
+  border: 1px solid $Grey-15;
+  background: $Background;
 }
 .standard-block-left__container-row {
   display: flex;
