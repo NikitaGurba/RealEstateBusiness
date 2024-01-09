@@ -71,61 +71,6 @@ body {
   border: 1px solid $grey-15;
   flex-direction: column;
 }
-.ring-layout {
-  display: flex;
-  padding: 1px;
-  align-items: center;
-  gap: 0.625rem;
-  border-radius: 6.25rem;
-  border: 1px solid transparent;
-  -webkit-mask: $gradient-mask;
-  -webkit-mask-composite: xor;
-  mask-composite: exclude;
-}
-
-.ring-mask {
-  background-color: $background;
-  border-radius: 6.25rem;
-  display: flex;
-  align-items: center;
-}
-
-.card-icon__outer-icon-container {
-  @extend .ring-layout;
-  background: $outer-gradient;
-}
-.card-icon__inner-icon-container {
-  @extend .ring-layout;
-  background: $inner-gradient;
-}
-.card-icon__outer-icon-container_mask {
-  @extend .ring-mask;
-  padding: 0.5rem;
-}
-.card-icon__inner-icon-container_mask {
-  @extend .ring-mask;
-  padding: 0.625rem;
-}
-
-.card-icon-center__outer-icon-container,
-.card-icon-left__outer-icon-container {
-  @extend .card-icon__outer-icon-container;
-}
-
-.card-icon-center__inner-icon-container,
-.card-icon-left__inner-icon-container {
-  @extend .card-icon__inner-icon-container;
-}
-
-.card-icon-center__outer-icon-container_mask,
-.card-icon-left__outer-icon-container_mask {
-  @extend .card-icon__outer-icon-container_mask;
-}
-
-.card-icon-center__inner-icon-container_mask,
-.card-icon-left__inner-icon-container_mask {
-  @extend .card-icon__inner-icon-container_mask;
-}
 
 .text-button {
   background: none;
