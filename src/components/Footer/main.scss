@@ -1,38 +1,20 @@
-@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono&family=Roboto&family=Urbanist&display=swap");
+@import "../../assets/scss/main.scss";
 
-$Background: #141414;
-$Grey-15: #262626;
-$Grey-08: #141414;
-$Grey-60: #999;
-$Absolute-White: #fff;
-$Absolute-Black: #000;
-$Grey-10: #1a1a1a;
-
-* {
-  margin: 0;
-  padding: 0;
-}
-body {
-  background-color: $Background;
-}
 .footer {
-  display: flex;
+  @include flex-start;
   flex-direction: column;
-  align-items: flex-start;
   align-self: stretch;
 }
 .footer-top {
-  display: flex;
+  @include flex-start;
   padding: 5rem;
-  align-items: flex-start;
   gap: 5rem;
   align-self: stretch;
 }
 .email-with-logo {
-  display: flex;
-  width: 20.375rem;
+  @include flex-start;
+  width: 20rem;
   flex-direction: column;
-  align-items: flex-start;
   gap: 1.5rem;
 }
 .input-field__icon-left {
@@ -49,7 +31,7 @@ body {
 }
 .input-field {
   display: flex;
-  width: 19.0625rem;
+  width: 19rem;
   padding: 0.875rem 1.25rem;
   align-items: center;
   gap: 0.375rem;
@@ -58,57 +40,44 @@ body {
   background: $Grey-08;
 }
 .input-field__input {
+  @include normal-text-500;
   flex: 1 0 0;
   color: $Grey-60;
-  font-family: Urbanist;
   font-size: 0.875rem;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 1.5rem; /* 171.429% */
-  letter-spacing: -0.00525rem;
+  line-height: 1.5rem; 
   outline: none;
   border: none;
   background-color: transparent;
 }
 
 .link-table {
-  display: flex;
+  @include flex-start;
   justify-content: space-between;
-  align-items: flex-start;
   flex: 1 0 0;
 }
 
 .link-table__column {
-  display: flex;
+  @include flex-start;
   flex-direction: column;
-  align-items: flex-start;
   gap: 1.5rem;
 }
 
 .link-table__column header {
+  @include normal-text-500;
   color: $Grey-60;
-  font-family: Urbanist;
   font-size: 1.125rem;
-  font-style: normal;
-  font-weight: 500;
   line-height: 1.5rem; /* 133.333% */
-  letter-spacing: -0.00675rem;
 }
 .link-table__column-list {
-  display: flex;
+  @include flex-start;
   flex-direction: column;
-  align-items: flex-start;
   gap: 1rem;
 }
 .link-table__column-list a {
+  @include normal-text-500;
   text-decoration: none;
-  color: $Absolute-White;
-  font-family: Urbanist;
   font-size: 1rem;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 1.5rem; /* 150% */
-  letter-spacing: -0.006rem;
+  line-height: 1.5rem;
 }
 
 .footer-bottom {
@@ -121,20 +90,15 @@ body {
 }
 
 .footer-bottom__links {
-  display: flex;
+  @include flex-start;
   padding: 0.625rem 0rem;
-  align-items: flex-start;
   gap: 1.25rem;
 }
 
 .footer-bottom__links a {
-  color: $Absolute-White;
-  font-family: Urbanist;
+  @include normal-text-500;
   font-size: 0.875rem;
-  font-style: normal;
-  font-weight: 500;
   line-height: 1.5rem; /* 171.429% */
-  letter-spacing: -0.00525rem;
 }
 
 .footer-bottom__buttons-social {
@@ -144,9 +108,8 @@ body {
   gap: 0.5rem;
 }
 .footer-bottom__button-social {
-  display: flex;
+  @include flex-start;
   padding: 0.625rem;
-  align-items: flex-start;
   gap: 0.625rem;
   border-radius: 3.625rem;
   background: $Grey-08;

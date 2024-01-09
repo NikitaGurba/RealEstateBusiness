@@ -1,56 +1,11 @@
-@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono&family=Roboto&family=Urbanist&display=swap");
+@import "../../assets/scss/main.scss";
 
-$Background: #141414;
-$Grey-15: #262626;
-$Grey-08: #141414;
-$Grey-60: #999;
-$Absolute-White: #fff;
-$Absolute-Black: #000;
-$Grey-10: #1a1a1a;
-$Purple: #a685fa;
-
-* {
-  margin: 0;
-  padding: 0;
-}
-body {
-  background-color: $Background;
-}
-.title-with-paragraph {
-  display: flex;
-  padding-right: 15.625rem;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 0.625rem;
-  align-self: stretch;
-}
-.title-with-paragraph__title {
-  align-self: stretch;
-  color: $Absolute-White;
-  font-family: Urbanist;
-  font-size: 2.375rem;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 150%; /* 3.5625rem */
-}
-.title-with-paragraph__paragraph {
-  align-self: stretch;
-  color: $Grey-60;
-  font-family: Urbanist;
-  font-size: 1rem;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 150%; /* 1.5rem */
-}
 .card-icon-left {
-  display: flex;
+  @include flex-start;
+  @include border-625-col;
   padding: 2.5rem;
-  flex-direction: column;
-  align-items: flex-start;
   gap: 1.25rem;
   flex: 1 0 0;
-  border-radius: 0.625rem;
-  border: 1px solid $Grey-15;
 }
 .card-icon-left__outer-icon-container {
   width: fit-content;
@@ -107,22 +62,15 @@ body {
 }
 
 .card-icon-left__text {
+  @include normal-text-600;
   align-self: stretch;
-  color: $Absolute-White;
   text-align: center;
-  font-family: Urbanist;
   font-size: 1rem;
-  font-style: normal;
-  font-weight: 600;
   line-height: 150%; /* 1.5rem */
 }
-.card-icon-left__paraghraph {
-  align-self: stretch;
-  color: $Grey-60;
-  font-family: Urbanist;
-  font-size: 1rem;
-  font-style: normal;
-  font-weight: 500;
+.card-icon-left__paragraph {
+  @include normal-text-500;
+  @include paragraph;
   line-height: 150%; /* 1.5rem */
 }
 .card-icon-left__header {
@@ -132,104 +80,15 @@ body {
   align-self: stretch;
 }
 .card-icon-left__text {
-  color: $Absolute-White;
-  font-family: Urbanist;
+  @include normal-text-600;
   height: fit-content;
   align-self: center;
   font-size: 1.25rem;
-  font-style: normal;
-  font-weight: 600;
-}
-.button span {
-  color: $Absolute-White;
-  font-family: Urbanist;
-  font-size: 0.875rem;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 150%; /* 1.3125rem */
-}
-.button {
-  cursor: pointer;
-  display: flex;
-  padding: 0.75rem 1.25rem;
-  align-items: flex-start;
-  gap: 0.625rem;
-  border-radius: 0.5rem;
-  border: 1px solid $Grey-15;
-  background: $Background
-}
-.standard-block {
-  display: flex;
-  width: 80rem;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 3.75rem;
-}
-.standard-block__rows {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 1.25rem;
-  align-self: stretch;
-}
-.standard-block__row {
-  display: flex;
-  align-items: flex-start;
-  gap: 1.25rem;
-  align-self: stretch;
-}
-.stars {
-  display: flex;
-  width: 3.42rem;
-  padding-right: 0rem;
-  justify-content: center;
-  align-items: center;
-}
-.standard-block__card {
-  display: flex;
-  padding: 2.5rem;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 1.25rem;
-  flex: 1 0 0;
-  align-self: stretch;
-  border-radius: 0.625rem;
-  border: 1px solid $Grey-15;
-  background: $Background;
-  background-image: url("../assets/img/CardBackground.png");
-}
-.standard-block__card-container {
-  display: flex;
-  align-items: center;
-  gap: 0.875rem;
-  align-self: stretch;
-}
-.standard-block__card-paragraph {
-  align-self: stretch;
-  color: $Grey-60;
-  font-family: Urbanist;
-  font-size: 1rem;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 150%; /* 1.5rem */
-}
-.standard-block__card-title-with-paragraph-title {
-  flex: 1 0 0;
-  color: $Absolute-White;
-  font-family: Urbanist;
-  font-size: 1.5rem;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 150%; /* 2.25rem */
 }
 .card-icon-left_row-card {
-  display: flex;
+  @include flex-start;
+  @include border-625-col;
   width: 25rem;
   padding: 2.5rem;
-  flex-direction: column;
-  align-items: flex-start;
   gap: 1.25rem;
-  border-radius: 0.625rem;
-  border: 1px solid $Grey-15;
 }
