@@ -1,0 +1,26 @@
+@import "../../assets/scss/main.scss";
+
+.card-icon-center {
+  @include border-625-col;
+  display: flex;
+  padding: 1.875rem 1rem;
+  align-items: center;
+  gap: 1rem;
+  flex: 1 0 0;
+  background: $background;
+}
+
+.card-icon-center__text {
+  @include normal-text-600;
+  align-self: stretch;
+  text-align: center;
+  font-size: 1rem;
+  line-height: 150%;
+}
+.card-icon-center__icon-right {
+  width: 1.625rem;
+  height: 1.625rem;
+  position: absolute;
+  right: 1.2rem;
+  top: 1.25rem;
+}

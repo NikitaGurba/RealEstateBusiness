@@ -1,0 +1,99 @@
+@import "../../assets/scss/main.scss";
+
+.card-icon-left_row-card {
+  @include flex-start;
+  @include border-625-col;
+  width: 25rem;
+  padding: 2.5rem;
+  gap: 1.25rem;
+}
+.standard-block-left {
+  display: flex;
+  width: 80rem;
+  align-items: center;
+  gap: 3.125rem;
+}
+.standard-block-left__container-right {
+  @include flex-start;
+  padding: 0.625rem;
+  flex-direction: column;
+  gap: 0.625rem;
+  flex: 1 0 0;
+  border-radius: 0.75rem;
+  background: $background;
+}
+.standard-block-left__container-left {
+  @include flex-start;
+  width: 25.75rem;
+  flex-direction: column;
+  gap: 2.5rem;
+  flex-shrink: 0;
+}
+.standard-block-left__title-with-paragraph {
+  @include flex-start;
+  padding: 0;
+  flex-direction: column;
+  gap: 0.625rem;
+  align-self: stretch;
+}
+.standard-block-left__title-with-paragraph__title {
+  @include normal-text-600;
+  align-self: stretch;
+  font-size: 2.375rem;
+  line-height: 150%;
+}
+.standard-block-left__card {
+  @include flex-start;
+  @include border-625-col;
+  padding: 2.5rem;
+  justify-content: center;
+  gap: 1.25rem;
+  align-self: stretch;
+  background: $grey-10;
+  background-image: url("../../assets/svg/CardBackground.svg");
+}
+.standard-block-left__title-with-paragraph__title {
+  @include normal-text-600;
+  align-self: stretch;
+  font-size: 2.375rem;
+  line-height: 150%;
+}
+.standard-block-left__title-with-paragraph__paragraph {
+  @include normal-text-500;
+  @include paragraph;
+  line-height: 150%;
+}
+.standard-block-left__card-title-with-paragraph-title {
+  @include normal-text-600;
+  align-self: stretch;
+  font-size: 1.375rem;
+  line-height: 150%;
+}
+.standard-block-left__card-paragraph {
+  @include normal-text-500;
+  align-self: stretch;
+  color: $white-90;
+  font-size: 1rem;
+  line-height: 150%;
+}
+.standard-block-left__card-button {
+  display: flex;
+  padding: 0.875rem 1.25rem;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  align-self: stretch;
+}
+.standard-block-left__card-icon-left {
+  @include flex-start;
+  @include border-625-col;
+  padding: 2.5rem;
+  gap: 1.5rem;
+  flex: 1 0 0;
+  background: $background;
+}
+.standard-block-left__container-row {
+  @include flex-start;
+  gap: 0.625rem;
+  align-self: stretch;
+}

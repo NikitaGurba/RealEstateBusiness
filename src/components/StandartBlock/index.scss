@@ -1,0 +1,41 @@
+@import "../../assets/scss/main.scss";
+
+.card-icon-left {
+  @include flex-start;
+  @include border-625-col;
+  padding: 2.5rem;
+  gap: 1.25rem;
+  flex: 1 0 0;
+}
+
+.card-icon-left__text {
+  @include normal-text-600;
+  align-self: stretch;
+  text-align: center;
+  font-size: 1rem;
+  line-height: 150%;
+}
+.card-icon-left__paragraph {
+  @include normal-text-500;
+  @include paragraph;
+  line-height: 150%; 
+}
+.card-icon-left__header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  align-self: stretch;
+}
+.card-icon-left__text {
+  @include normal-text-600;
+  height: fit-content;
+  align-self: center;
+  font-size: 1.25rem;
+}
+.card-icon-left_row-card {
+  @include flex-start;
+  @include border-625-col;
+  width: 25rem;
+  padding: 2.5rem;
+  gap: 1.25rem;
+}

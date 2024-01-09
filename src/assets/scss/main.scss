@@ -1,0 +1,200 @@
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono&family=Roboto&family=Urbanist&display=swap");
+
+$background: #141414;
+$grey-15: #262626;
+$grey-08: #141414;
+$grey-60: #999;
+$absolute-white: #fff;
+$absolute-black: #000;
+$grey-10: #1a1a1a;
+$purple: #a685fa;
+$purple-60: #703bf7;
+$white-90: #e4e4e7;
+$gradient-mask: linear-gradient($absolute-white 0 0) padding-box,
+  linear-gradient(transparent 0 0);
+
+$outer-gradient: linear-gradient(
+  45deg,
+  $purple 0%,
+  transparent 40%,
+  transparent 60%,
+  $purple 100%
+);
+
+$inner-gradient: linear-gradient(
+  135deg,
+  $purple 0%,
+  transparent 30%,
+  transparent 70%,
+  $purple 100%
+);
+
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: $background;
+  font-family: Urbanist;
+}
+
+@mixin normal-text {
+  color: $absolute-white;
+  font-style: normal;
+}
+
+@mixin normal-text-700 {
+  @include normal-text;
+  font-weight: 700;
+}
+
+@mixin normal-text-600 {
+  @include normal-text;
+  font-weight: 600;
+}
+
+@mixin normal-text-500 {
+  @include normal-text;
+  font-weight: 500;
+}
+@mixin paragraph {
+  align-self: stretch;
+  color: $grey-60;
+  font-size: 1rem;
+}
+@mixin flex-start {
+  display: flex;
+  align-items: flex-start;
+}
+@mixin border-625-col {
+  border-radius: 0.625rem;
+  border: 1px solid $grey-15;
+  flex-direction: column;
+}
+
+.text-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.text-button span,
+.button span {
+  @include normal-text-500;
+  font-size: 0.875rem;
+  line-height: 150%;
+}
+
+.card-icon-left {
+  @include flex-start;
+  @include border-625-col;
+  padding: 2.5rem;
+  gap: 1.25rem;
+  flex: 1 0 0;
+}
+
+.card-icon-left__text {
+  @include normal-text-600;
+  align-self: stretch;
+  text-align: center;
+  font-size: 1rem;
+  line-height: 150%;
+}
+.card-icon-left__paragraph {
+  @include normal-text-500;
+  @include paragraph;
+  line-height: 150%;
+}
+.card-icon-left__header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  align-self: stretch;
+}
+.card-icon-left__text {
+  @include normal-text-600;
+  height: fit-content;
+  align-self: center;
+  font-size: 1.25rem;
+}
+
+.button {
+  @include flex-start;
+  cursor: pointer;
+  padding: 0.75rem 1.25rem;
+  gap: 0.625rem;
+  border-radius: 0.5rem;
+  border: 1px solid $grey-15;
+  background: $grey-08;
+}
+.title-with-paragraph {
+  @include flex-start;
+  padding-right: 15.625rem;
+  flex-direction: column;
+  gap: 0.625rem;
+  align-self: stretch;
+}
+.title-with-paragraph__title {
+  @include normal-text-600;
+  align-self: stretch;
+  font-size: 2.375rem;
+  line-height: 150%;
+}
+.title-with-paragraph__paragraph {
+  @include normal-text-500;
+  @include paragraph;
+  line-height: 150%;
+}
+
+.standard-block {
+  @include flex-start;
+  width: 80rem;
+  flex-direction: column;
+  gap: 3.75rem;
+}
+.standard-block__rows {
+  @include flex-start;
+  flex-direction: column;
+  gap: 1.25rem;
+  align-self: stretch;
+}
+.standard-block__row {
+  @include flex-start;
+  gap: 1.25rem;
+  align-self: stretch;
+}
+.stars {
+  display: flex;
+  width: 3.5rem;
+  padding-right: 0rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.standard-block__card {
+  @include flex-start;
+  @include border-625-col;
+  padding: 2.5rem;
+  justify-content: center;
+  gap: 1.25rem;
+  flex: 1 0 0;
+  align-self: stretch;
+  background: $background;
+  background-image: url("../../assets/svg/CardBackground.svg");
+}
+.standard-block__card-container {
+  display: flex;
+  align-items: center;
+  gap: 0.875rem;
+  align-self: stretch;
+}
+.standard-block__card-paragraph {
+  @include normal-text-500;
+  @include paragraph;
+  line-height: 150%;
+}
+.standard-block__card-title-with-paragraph-title {
+  @include normal-text-700;
+  flex: 1 0 0;
+  font-size: 1.5rem;
+  line-height: 150%;
+}

@@ -1,0 +1,23 @@
+@import "../../assets/scss/main.scss";
+
+.header {
+  display: flex;
+  padding: 0.875rem 5rem;
+  justify-content: space-between;
+  align-items: center;
+  align-self: stretch;
+  background: $background;
+}
+.logo-container {
+  display: flex;
+  width: 7rem;
+  padding-right: 0rem;
+  justify-content: center;
+  align-items: center;
+  gap: 0.45rem;
+}
+.header__center {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
