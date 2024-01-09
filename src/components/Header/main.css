@@ -10,7 +10,7 @@
   justify-content: space-between;
   align-items: center;
   align-self: stretch;
-  background: var(--Grey-10, #1a1a1a);
+  background: var(--Grey-10, #141414);
 }
 .logo-container {
   display: flex;

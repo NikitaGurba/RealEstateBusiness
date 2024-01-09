@@ -13,7 +13,7 @@
   gap: 0.375rem;
   align-self: stretch;
   border-bottom: 1px solid var(--Grey-15, #262626);
-  background: var(--Grey-10, #1a1a1a);
+  background: var(--Grey-10, #141414);
   background-image: url("./assets/img/AbstractDesign.png");
   background-repeat: no-repeat;
   background-size: 100% 100%;

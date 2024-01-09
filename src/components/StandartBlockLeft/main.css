@@ -83,14 +83,14 @@ body {
   mask-composite: exclude; /*5*/
 }
 .card-icon-left__outer-icon-container_mask {
-  background-color: #1a1a1a;
+  background-color: #141414;
   padding: 0.5rem;
   border-radius: 6.25rem;
   display: flex;
   align-items: center;
 }
 .card-icon-left__inner-icon-container_mask {
-  background-color: #1a1a1a;
+  background-color: #141414;
   padding: 0.625rem;
   border-radius: 6.25rem;
   display: flex;
@@ -187,7 +187,7 @@ body {
   align-self: stretch;
   border-radius: 0.625rem;
   border: 1px solid var(--Grey-15, #262626);
-  background: var(--Grey-10, #1a1a1a);
+  background: var(--Grey-10, #141414);
   background-image: url("assets/img/CardBackground.png");
 }
 .standard-block__card-container {
@@ -238,7 +238,7 @@ body {
   gap: 0.625rem;
   flex: 1 0 0;
   border-radius: 0.75rem;
-  background: var(--Grey-10, #1a1a1a);
+  background: var(--Grey-10, #141414);
 }
 .standard-block-left__container-left {
   display: flex;
@@ -275,7 +275,7 @@ body {
   align-self: stretch;
   border-radius: 0.625rem;
   border: 1px solid var(--Grey-15, #262626);
-  background: var(--Grey-10, #1a1a1a);
+  background: var(--Grey-10, #141414);
   background-image: url("assets/img/CardBackground.png");
 }
 .standard-block-left__title-with-paragraph__title {
@@ -330,7 +330,7 @@ body {
   gap: 0.625rem;
   flex: 1 0 0;
   border-radius: 0.75rem;
-  background: var(--Grey-10, #1a1a1a);
+  background: var(--Grey-10, #141414);
 }
 .standard-block-left__card-icon-left {
   display: flex;

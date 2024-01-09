@@ -5,7 +5,7 @@
   padding: 0;
 }
 body {
-  background-color: #1a1a1a;
+  background-color: #141414;
 }
 .card-icon-left {
   display: flex;
@@ -57,14 +57,14 @@ body {
   mask-composite: exclude; /*5*/
 }
 .card-icon-left__outer-icon-container_mask {
-  background-color: #1a1a1a;
+  background-color: #141414;
   padding: 0.5rem;
   border-radius: 6.25rem;
   display: flex;
   align-items: center;
 }
 .card-icon-left__inner-icon-container_mask {
-  background-color: #1a1a1a;
+  background-color: #141414;
   padding: 0.625rem;
   border-radius: 6.25rem;
   display: flex;
