@@ -1,5 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono&family=Roboto&family=Urbanist&display=swap");
 
+$Background: #141414;
+$Grey-15: #262626;
+$Grey-08: #141414;
+$Grey-60: #999;
+$Absolute-White: #fff;
+$Absolute-Black: #000;
+$Grey-10: #1a1a1a;
+$Purple: #a685fa;
+
 * {
   margin: 0;
   padding: 0;
@@ -12,8 +21,8 @@
   gap: 1rem;
   flex: 1 0 0;
   border-radius: 0.625rem;
-  border: 1px solid var(--Grey-15, #262626);
-  background: var(--Grey-10, #141414);
+  border: 1px solid $Grey-15;
+  background: $Background;
 }
 .card-icon-center__outer-icon-container {
   display: flex;
@@ -21,18 +30,18 @@
   align-items: center;
   gap: 0.625rem;
   border-radius: 6.25rem;
-  border: 1px solid transparent; /*2*/
+  border: 1px solid transparent; 
   background: linear-gradient(
     45deg,
-    rgba(166, 133, 250, 1) 0%,
-    rgba(166, 133, 250, 0) 40%,
-    rgba(166, 133, 250, 0) 60%,
-    rgba(166, 133, 250, 1) 100%
+    $Purple 0%,
+    transparent 40%,
+    transparent 60%,
+    $Purple 100%
   );
-  -webkit-mask: /*4*/ linear-gradient(#fff 0 0) padding-box,
+  -webkit-mask: linear-gradient($Absolute-White 0 0) padding-box,
     linear-gradient(transparent 0 0);
-  -webkit-mask-composite: xor; /*5'*/
-  mask-composite: exclude; /*5*/
+  -webkit-mask-composite: xor; 
+  mask-composite: exclude; 
 }
 .card-icon-center__inner-icon-container {
   display: flex;
@@ -43,25 +52,25 @@
   border: 1px solid transparent; /*2*/
   background: linear-gradient(
     135deg,
-    rgba(166, 133, 250, 1) 0%,
-    rgba(166, 133, 250, 0) 30%,
-    rgba(166, 133, 250, 0) 70%,
-    rgba(166, 133, 250, 1) 100%
+    $Purple 0%,
+    transparent 30%,
+    transparent 70%,
+    $Purple 100%
   );
-  -webkit-mask: /*4*/ linear-gradient(#fff 0 0) padding-box,
+  -webkit-mask: /*4*/ linear-gradient($Absolute-White 0 0) padding-box,
     linear-gradient(transparent 0 0);
   -webkit-mask-composite: xor; /*5'*/
   mask-composite: exclude; /*5*/
 }
 .card-icon-center__outer-icon-container_mask {
-  background-color: #141414;
+  background-color: $Background;
   padding: 0.5rem;
   border-radius: 6.25rem;
   display: flex;
   align-items: center;
 }
 .card-icon-center__inner-icon-container_mask {
-  background-color: #141414;
+  background-color: $Background;
   padding: 0.625rem;
   border-radius: 6.25rem;
   display: flex;
@@ -70,7 +79,7 @@
 
 .card-icon-center__text {
   align-self: stretch;
-  color: var(--Absolute-White, #fff);
+  color: $Absolute-White;
   text-align: center;
   font-family: Urbanist;
   font-size: 1rem;

@@ -1,11 +1,20 @@
 @import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono&family=Roboto&family=Urbanist&display=swap");
 
+$Background: #141414;
+$Grey-15: #262626;
+$Grey-08: #141414;
+$Grey-60: #999;
+$Absolute-White: #fff;
+$Absolute-Black: #000;
+$Grey-10: #1a1a1a;
+$Purple: #a685fa;
+
 * {
   margin: 0;
   padding: 0;
 }
 body {
-  background-color: #141414;
+  background-color: $Background;
 }
 .card-icon-left {
   display: flex;
@@ -15,9 +24,9 @@ body {
   gap: 1.25rem;
   flex: 1 0 0;
   border-radius: 0.625rem;
-  border: 1px solid var(--Grey-15, #262626);
+  border: 1px solid $Grey-15;
 }
-.card-icon-left_  _outer-icon-container {
+.card-icon-left__outer-icon-container {
   width: fit-content;
   display: flex;
   padding: 1px;
@@ -27,12 +36,12 @@ body {
   border: 1px solid transparent; /*2*/
   background: linear-gradient(
     45deg,
-    rgba(166, 133, 250, 1) 0%,
-    rgba(166, 133, 250, 0) 40%,
-    rgba(166, 133, 250, 0) 60%,
-    rgba(166, 133, 250, 1) 100%
+    $Purple 0%,
+    transparent 40%,
+    transparent 60%,
+    $Purple 100%
   );
-  -webkit-mask: /*4*/ linear-gradient(#fff 0 0) padding-box,
+  -webkit-mask: /*4*/ linear-gradient($Absolute-White 0 0) padding-box,
     linear-gradient(transparent 0 0);
   -webkit-mask-composite: xor; /*5'*/
   mask-composite: exclude; /*5*/
@@ -46,25 +55,25 @@ body {
   border: 1px solid transparent; /*2*/
   background: linear-gradient(
     135deg,
-    rgba(166, 133, 250, 1) 0%,
-    rgba(166, 133, 250, 0) 30%,
-    rgba(166, 133, 250, 0) 70%,
-    rgba(166, 133, 250, 1) 100%
+    $Purple 0%,
+    transparent 30%,
+    transparent 70%,
+    $Purple 100%
   );
-  -webkit-mask: /*4*/ linear-gradient(#fff 0 0) padding-box,
+  -webkit-mask: /*4*/ linear-gradient($Absolute-White 0 0) padding-box,
     linear-gradient(transparent 0 0);
   -webkit-mask-composite: xor; /*5'*/
   mask-composite: exclude; /*5*/
 }
 .card-icon-left__outer-icon-container_mask {
-  background-color: #141414;
+  background-color: $Background;
   padding: 0.5rem;
   border-radius: 6.25rem;
   display: flex;
   align-items: center;
 }
 .card-icon-left__inner-icon-container_mask {
-  background-color: #141414;
+  background-color: $Background;
   padding: 0.625rem;
   border-radius: 6.25rem;
   display: flex;
@@ -73,7 +82,7 @@ body {
 
 .card-icon-left__text {
   align-self: stretch;
-  color: var(--Absolute-White, #fff);
+  color: $Absolute-White;
   text-align: center;
   font-family: Urbanist;
   font-size: 1rem;
@@ -83,7 +92,7 @@ body {
 }
 .card-icon-left__paragraph {
   align-self: stretch;
-  color: var(--Grey-60, #999);
+  color: $Grey-60;
   font-family: Urbanist;
   font-size: 1rem;
   font-style: normal;
@@ -97,7 +106,7 @@ body {
   align-self: stretch;
 }
 .card-icon-left__text {
-  color: var(--Absolute-White, #fff);
+  color: $Absolute-White;
   font-family: Urbanist;
   height: fit-content;
   align-self: center;
