@@ -66,7 +66,7 @@
   @include normal-text-500;
   color: $grey-60;
   font-size: 1.125rem;
-  line-height: 1.5rem; /* 133.333% */
+  line-height: 1.5rem;
 }
 .link-table__column-list {
   @include flex-start;
@@ -98,7 +98,7 @@
 .footer-bottom__links a {
   @include normal-text-500;
   font-size: 0.875rem;
-  line-height: 1.5rem; /* 171.429% */
+  line-height: 1.5rem;
 }
 
 .footer-bottom__buttons-social {

@@ -40,7 +40,7 @@
   @include normal-text-600;
   align-self: stretch;
   font-size: 2.375rem;
-  line-height: 150%; /* 3.5625rem */
+  line-height: 150%;
 }
 .standard-block-left__card {
   @include flex-start;
@@ -56,25 +56,25 @@
   @include normal-text-600;
   align-self: stretch;
   font-size: 2.375rem;
-  line-height: 150%; /* 3.5625rem */
+  line-height: 150%;
 }
 .standard-block-left__title-with-paragraph__paragraph {
   @include normal-text-500;
   @include paragraph;
-  line-height: 150%; /* 1.5rem */
+  line-height: 150%;
 }
 .standard-block-left__card-title-with-paragraph-title {
   @include normal-text-600;
   align-self: stretch;
   font-size: 1.375rem;
-  line-height: 150%; /* 2.0625rem */
+  line-height: 150%;
 }
 .standard-block-left__card-paragraph {
   @include normal-text-500;
   align-self: stretch;
   color: $white-90;
   font-size: 1rem;
-  line-height: 150%; /* 1.5rem */
+  line-height: 150%;
 }
 .standard-block-left__card-button {
   display: flex;

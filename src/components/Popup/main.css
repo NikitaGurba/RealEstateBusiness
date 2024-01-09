@@ -64,7 +64,7 @@ body {
   font-style: normal;
   font-weight: 500;
   font-size: 0.875rem;
-  line-height: 150%; /* 1.3125rem */
+  line-height: 150%;
 }
 
 .card-icon-left {
@@ -85,7 +85,7 @@ body {
   align-self: stretch;
   text-align: center;
   font-size: 1rem;
-  line-height: 150%; /* 1.5rem */
+  line-height: 150%;
 }
 
 .card-icon-left__paragraph {
@@ -95,7 +95,7 @@ body {
   align-self: stretch;
   color: #999;
   font-size: 1rem;
-  line-height: 150%; /* 1.5rem */
+  line-height: 150%;
 }
 
 .card-icon-left__header {
@@ -140,7 +140,7 @@ body {
   font-weight: 600;
   align-self: stretch;
   font-size: 2.375rem;
-  line-height: 150%; /* 3.5625rem */
+  line-height: 150%;
 }
 
 .title-with-paragraph__paragraph {
@@ -150,7 +150,7 @@ body {
   align-self: stretch;
   color: #999;
   font-size: 1rem;
-  line-height: 150%; /* 1.5rem */
+  line-height: 150%;
 }
 
 .standard-block {
@@ -264,7 +264,7 @@ body {
   font-weight: 500;
   text-align: center;
   font-size: 0.875rem;
-  line-height: 150%; /* 1.3125rem */
+  line-height: 150%;
 }
 
 .popup__text-link {
@@ -274,5 +274,3 @@ body {
 .hide {
   display: none;
 }
-
-/*# sourceMappingURL=main.css.map */

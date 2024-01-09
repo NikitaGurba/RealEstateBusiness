@@ -131,7 +131,7 @@ body {
 .button span {
   @include normal-text-500;
   font-size: 0.875rem;
-  line-height: 150%; /* 1.3125rem */
+  line-height: 150%; 
 }
 
 .card-icon-left {
@@ -147,12 +147,12 @@ body {
   align-self: stretch;
   text-align: center;
   font-size: 1rem;
-  line-height: 150%; /* 1.5rem */
+  line-height: 150%;
 }
 .card-icon-left__paragraph {
   @include normal-text-500;
   @include paragraph;
-  line-height: 150%; /* 1.5rem */
+  line-height: 150%;
 }
 .card-icon-left__header {
   display: flex;
@@ -187,12 +187,12 @@ body {
   @include normal-text-600;
   align-self: stretch;
   font-size: 2.375rem;
-  line-height: 150%; /* 3.5625rem */
+  line-height: 150%;
 }
 .title-with-paragraph__paragraph {
   @include normal-text-500;
   @include paragraph;
-  line-height: 150%; /* 1.5rem */
+  line-height: 150%;
 }
 
 .standard-block {
