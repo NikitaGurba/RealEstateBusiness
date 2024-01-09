@@ -10,6 +10,24 @@ $grey-10: #1a1a1a;
 $purple: #a685fa;
 $purple-60: #703bf7;
 $white-90: #e4e4e7;
+$gradient-mask: linear-gradient($absolute-white 0 0) padding-box,
+  linear-gradient(transparent 0 0);
+
+$outer-gradient: linear-gradient(
+  45deg,
+  $purple 0%,
+  transparent 40%,
+  transparent 60%,
+  $purple 100%
+);
+
+$inner-gradient: linear-gradient(
+  135deg,
+  $purple 0%,
+  transparent 30%,
+  transparent 70%,
+  $purple 100%
+);
 
 * {
   margin: 0;
@@ -60,8 +78,7 @@ body {
   gap: 0.625rem;
   border-radius: 6.25rem;
   border: 1px solid transparent;
-  -webkit-mask: linear-gradient($absolute-white 0 0) padding-box,
-    linear-gradient(transparent 0 0);
+  -webkit-mask: $gradient-mask;
   -webkit-mask-composite: xor;
   mask-composite: exclude;
 }
@@ -75,23 +92,11 @@ body {
 
 .card-icon__outer-icon-container {
   @extend .ring-layout;
-  background: linear-gradient(
-    45deg,
-    $purple 0%,
-    transparent 40%,
-    transparent 60%,
-    $purple 100%
-  );
+  background: $outer-gradient;
 }
 .card-icon__inner-icon-container {
   @extend .ring-layout;
-  background: linear-gradient(
-    135deg,
-    $purple 0%,
-    transparent 30%,
-    transparent 70%,
-    $purple 100%
-  );
+  background: $inner-gradient;
 }
 .card-icon__outer-icon-container_mask {
   @extend .ring-mask;
@@ -131,7 +136,7 @@ body {
 .button span {
   @include normal-text-500;
   font-size: 0.875rem;
-  line-height: 150%; 
+  line-height: 150%;
 }
 
 .card-icon-left {
@@ -246,5 +251,5 @@ body {
   @include normal-text-700;
   flex: 1 0 0;
   font-size: 1.5rem;
-  line-height: 150%; 
+  line-height: 150%;
 }

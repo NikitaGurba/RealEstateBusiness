@@ -33,4 +33,3 @@ window.addEventListener("scroll", (): void => {
   res();
 });
 
-console.log("afsfsa");

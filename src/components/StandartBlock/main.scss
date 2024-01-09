@@ -7,59 +7,6 @@
   gap: 1.25rem;
   flex: 1 0 0;
 }
-.card-icon-left__outer-icon-container {
-  width: fit-content;
-  display: flex;
-  padding: 1px;
-  align-items: center;
-  gap: 0.625rem;
-  border-radius: 6.25rem;
-  border: 1px solid transparent;
-  background: linear-gradient(
-    45deg,
-    $purple 0%,
-    transparent 40%,
-    transparent 60%,
-    $purple 100%
-  );
-  -webkit-mask: linear-gradient($absolute-white 0 0) padding-box,
-    linear-gradient(transparent 0 0);
-  -webkit-mask-composite: xor;
-  mask-composite: exclude;
-}
-.card-icon-left__inner-icon-container {
-  display: flex;
-  padding: 1px;
-  align-items: center;
-  gap: 0.625rem;
-  border-radius: 6.25rem;
-  border: 1px solid transparent;
-  background: linear-gradient(
-    135deg,
-    $purple 0%,
-    transparent 30%,
-    transparent 70%,
-    $purple 100%
-  );
-  -webkit-mask: linear-gradient($absolute-white 0 0) padding-box,
-    linear-gradient(transparent 0 0);
-  -webkit-mask-composite: xor;
-  mask-composite: exclude;
-}
-.card-icon-left__outer-icon-container_mask {
-  background-color: $background;
-  padding: 0.5rem;
-  border-radius: 6.25rem;
-  display: flex;
-  align-items: center;
-}
-.card-icon-left__inner-icon-container_mask {
-  background-color: $background;
-  padding: 0.625rem;
-  border-radius: 6.25rem;
-  display: flex;
-  align-items: center;
-}
 
 .card-icon-left__text {
   @include normal-text-600;
