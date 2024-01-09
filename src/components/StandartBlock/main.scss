@@ -17,12 +17,12 @@
   border: 1px solid transparent; /*2*/
   background: linear-gradient(
     45deg,
-    $Purple 0%,
+    $purple 0%,
     transparent 40%,
     transparent 60%,
-    $Purple 100%
+    $purple 100%
   );
-  -webkit-mask: /*4*/ linear-gradient($Absolute-White 0 0) padding-box,
+  -webkit-mask: /*4*/ linear-gradient($absolute-white 0 0) padding-box,
     linear-gradient(transparent 0 0);
   -webkit-mask-composite: xor; /*5'*/
   mask-composite: exclude; /*5*/
@@ -36,25 +36,25 @@
   border: 1px solid transparent; /*2*/
   background: linear-gradient(
     135deg,
-    $Purple 0%,
+    $purple 0%,
     transparent 30%,
     transparent 70%,
-    $Purple 100%
+    $purple 100%
   );
-  -webkit-mask: /*4*/ linear-gradient($Absolute-White 0 0) padding-box,
+  -webkit-mask: /*4*/ linear-gradient($absolute-white 0 0) padding-box,
     linear-gradient(transparent 0 0);
   -webkit-mask-composite: xor; /*5'*/
   mask-composite: exclude; /*5*/
 }
 .card-icon-left__outer-icon-container_mask {
-  background-color: $Background;
+  background-color: $background;
   padding: 0.5rem;
   border-radius: 6.25rem;
   display: flex;
   align-items: center;
 }
 .card-icon-left__inner-icon-container_mask {
-  background-color: $Background;
+  background-color: $background;
   padding: 0.625rem;
   border-radius: 6.25rem;
   display: flex;

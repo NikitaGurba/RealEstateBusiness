@@ -8,7 +8,7 @@
   align-self: stretch;
 }
 .container {
-  background-image: linear-gradient(95deg, $Grey-15 -26%, transparent 40%),
+  background-image: linear-gradient(95deg, $grey-15 -26%, transparent 40%),
     url("../../assets/svg/DiagonalRectangles.svg");
   background-size: contain;
   background-repeat: no-repeat;
@@ -34,7 +34,7 @@
   align-items: center;
   gap: 0.5rem;
   border-radius: 0.5rem;
-  background: $Purple-60;
+  background: $purple-60;
 }
 .title-with-paragraph_flex1 {
   @extend .title-with-paragraph;

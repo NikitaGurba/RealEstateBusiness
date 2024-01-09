@@ -1,27 +1,27 @@
 @import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono&family=Roboto&family=Urbanist&display=swap");
 
-$Background: #141414;
-$Grey-15: #262626;
-$Grey-08: #141414;
-$Grey-60: #999;
-$Absolute-White: #fff;
-$Absolute-Black: #000;
-$Grey-10: #1a1a1a;
-$Purple: #a685fa;
-$Purple-60: #703bf7;
-$White-90: #e4e4e7;
+$background: #141414;
+$grey-15: #262626;
+$grey-08: #141414;
+$grey-60: #999;
+$absolute-white: #fff;
+$absolute-black: #000;
+$grey-10: #1a1a1a;
+$purple: #a685fa;
+$purple-60: #703bf7;
+$white-90: #e4e4e7;
 
 * {
   margin: 0;
   padding: 0;
 }
 body {
-  background-color: $Background;
+  background-color: $background;
   font-family: Urbanist;
 }
 
 @mixin normal-text {
-  color: $Absolute-White;
+  color: $absolute-white;
   font-style: normal;
 }
 
@@ -41,7 +41,7 @@ body {
 }
 @mixin paragraph {
   align-self: stretch;
-  color: $Grey-60;
+  color: $grey-60;
   font-size: 1rem;
 }
 @mixin flex-start {
@@ -50,7 +50,7 @@ body {
 }
 @mixin border-625-col {
   border-radius: 0.625rem;
-  border: 1px solid $Grey-15;
+  border: 1px solid $grey-15;
   flex-direction: column;
 }
 .ring-layout {
@@ -60,14 +60,14 @@ body {
   gap: 0.625rem;
   border-radius: 6.25rem;
   border: 1px solid transparent;
-  -webkit-mask: linear-gradient($Absolute-White 0 0) padding-box,
+  -webkit-mask: linear-gradient($absolute-white 0 0) padding-box,
     linear-gradient(transparent 0 0);
   -webkit-mask-composite: xor;
   mask-composite: exclude;
 }
 
 .ring-mask {
-  background-color: $Background;
+  background-color: $background;
   border-radius: 6.25rem;
   display: flex;
   align-items: center;
@@ -77,20 +77,20 @@ body {
   @extend .ring-layout;
   background: linear-gradient(
     45deg,
-    $Purple 0%,
+    $purple 0%,
     transparent 40%,
     transparent 60%,
-    $Purple 100%
+    $purple 100%
   );
 }
 .card-icon__inner-icon-container {
   @extend .ring-layout;
   background: linear-gradient(
     135deg,
-    $Purple 0%,
+    $purple 0%,
     transparent 30%,
     transparent 70%,
-    $Purple 100%
+    $purple 100%
   );
 }
 .card-icon__outer-icon-container_mask {
@@ -173,8 +173,8 @@ body {
   padding: 0.75rem 1.25rem;
   gap: 0.625rem;
   border-radius: 0.5rem;
-  border: 1px solid $Grey-15;
-  background: $Grey-08;
+  border: 1px solid $grey-15;
+  background: $grey-08;
 }
 .title-with-paragraph {
   @include flex-start;
@@ -228,7 +228,7 @@ body {
   gap: 1.25rem;
   flex: 1 0 0;
   align-self: stretch;
-  background: $Background;
+  background: $background;
   background-image: url("../../assets/svg/CardBackground.svg");
 }
 .standard-block__card-container {
