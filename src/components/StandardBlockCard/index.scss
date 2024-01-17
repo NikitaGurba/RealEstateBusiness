@@ -1,0 +1,34 @@
+@import "../../assets/scss/main.scss";
+
+.standard-block__card {
+  @include flex-start;
+  @include border-625-col;
+  width: 70%;
+  padding: 2.5rem;
+  justify-content: center;
+  gap: 1.25rem;
+  flex: 2 0 0;
+  align-self: stretch;
+  background: $grey-10;
+  background-image: url("../../assets/svg/WideCardBackground.svg");
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+}
+
+.standard-block__card-container {
+  display: flex;
+  align-items: center;
+  gap: 0.875rem;
+  align-self: stretch;
+}
+.standard-block__card-paragraph {
+  @include normal-text-500;
+  @include paragraph;
+  line-height: 150%;
+}
+.standard-block__card-title-with-paragraph-title {
+  @include normal-text-700;
+  flex: 1 0 0;
+  font-size: 1.5rem;
+  line-height: 150%;
+}

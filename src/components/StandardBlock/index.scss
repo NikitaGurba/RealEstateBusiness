@@ -1,5 +1,32 @@
 @import "../../assets/scss/main.scss";
 
+.standard-block {
+  @include flex-start;
+  width: 100%;
+  flex-direction: column;
+  gap: 3.75rem;
+  padding: 5rem;
+  box-sizing: border-box;
+}
+.standard-block__rows {
+  @include flex-start;
+  flex-direction: column;
+  gap: 1.25rem;
+  align-self: stretch;
+}
+.standard-block__row {
+  @include flex-start;
+  gap: 1.25rem;
+  align-self: stretch;
+}
+.stars {
+  display: flex;
+  width: 3.5rem;
+  padding-right: 0rem;
+  justify-content: center;
+  align-items: center;
+}
+
 .card-icon-left {
   @include flex-start;
   @include border-625-col;

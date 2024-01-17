@@ -9,9 +9,11 @@
 }
 .standard-block-left {
   display: flex;
-  width: 80rem;
+  width: 100%;
   align-items: center;
   gap: 3.125rem;
+  padding: 5rem;
+  box-sizing: border-box;
 }
 .standard-block-left__container-right {
   @include flex-start;
@@ -20,7 +22,7 @@
   gap: 0.625rem;
   flex: 1 0 0;
   border-radius: 0.75rem;
-  background: $background;
+  background: $grey-10;
 }
 .standard-block-left__container-left {
   @include flex-start;
@@ -51,6 +53,8 @@
   align-self: stretch;
   background: $grey-10;
   background-image: url("../../assets/svg/CardBackground.svg");
+  background-repeat: no-repeat;
+  background-size: 100% auto;
 }
 .standard-block-left__title-with-paragraph__title {
   @include normal-text-600;

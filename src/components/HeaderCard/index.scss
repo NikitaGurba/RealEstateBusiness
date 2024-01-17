@@ -1,0 +1,19 @@
+@import "../../assets/scss/main.scss";
+
+$background-gradient: linear-gradient(96deg, #262626 -26.82%, rgba(38, 38, 38, 0.00) 40.46%);
+
+.content {
+  display: flex;
+  padding: 3.75rem 5rem;
+  align-items: center;
+  gap: 9.375rem;
+  align-self: stretch;
+}
+.title-with-paragraph_flex1 {
+  @extend .title-with-paragraph;
+  flex: 1 0 0;
+}
+.header-card
+{
+  background: $background-gradient;
+}
