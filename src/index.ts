@@ -8,8 +8,10 @@ import {
   StandardBlock2,
   StandardBlockLeft1,
   HeaderCardContent,
+  BlockTabsContent,
 } from "./public/data";
 import { throttle } from "./utils/throttle";
+import BlockTabsScript from "./components/BlockTabs/index"
 
 const Popup = require("./components/Popup/index.html").default;
 const Header = require("./components/Header/index.html").default;
@@ -19,6 +21,9 @@ const MainCard = require("./components/MainCard/index.html").default;
 const StandardBlock = require("./components/StandardBlock/index.html").default;
 const StandardBlockLeft =
   require("./components/StandardBlockLeft/index.html").default;
+const ContactForm = require("./components/ContactForm/index.html").default;
+const BlockTabs = require("./components/BlockTabs/index.html").default;
+const Gallery = require("./components/Gallery/index.html").default;
 const Footer = require("./components/Footer/index.html").default;
 
 document.body.insertAdjacentHTML("beforeend", Popup);
@@ -41,6 +46,12 @@ document.body.insertAdjacentHTML("beforeend", StandardBlockLeft);
 changeStandardBlockLeft(StandardBlockLeft1);
 
 document.body.insertAdjacentHTML("beforeend", MainCard);
+document.body.insertAdjacentHTML("beforeend", ContactForm);
+
+document.body.insertAdjacentHTML("beforeend", BlockTabs);
+BlockTabsScript(BlockTabsContent);
+
+document.body.insertAdjacentHTML("beforeend", Gallery);
 document.body.insertAdjacentHTML("beforeend", Footer);
 
 let entries: Array<Element> = Array.from(document.body.children);
@@ -59,8 +70,10 @@ const handleScrollAnimation = (): void => {
   entries.forEach((element) => {
     if (isInViewport(element)) {
       if (element.className.includes("block-hide")) {
-        element.className = element.className.replace("block-hide ", "");
-        element.className += " block-animation";
+        element.className = element.className.replace(
+          "block-hide",
+          "block-animation"
+        );
       }
     }
   });
@@ -68,10 +81,9 @@ const handleScrollAnimation = (): void => {
 function isInViewport(element: Element): boolean {
   const rect: DOMRect = element.getBoundingClientRect();
   return (
-    rect.top >= 0 &&
     rect.left >= 0 &&
     rect.bottom <=
-      (window.innerHeight || document.documentElement.clientHeight) +100 &&
+      (window.innerHeight || document.documentElement.clientHeight) + 100 &&
     rect.right <= (window.innerWidth || document.documentElement.clientWidth)
   );
 }

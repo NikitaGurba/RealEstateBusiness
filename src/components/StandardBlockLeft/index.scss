@@ -11,7 +11,7 @@
   display: flex;
   width: 100%;
   align-items: center;
-  gap: 3.125rem;
+  gap: 3rem;
   padding: 5rem;
   box-sizing: border-box;
 }
@@ -118,20 +118,21 @@
     // flex: none;
     // display: block;
     // width: 100%;
-    display: block;
-    width: 90%;
+    display: flex;
+    width: 100%;
+    box-sizing: border-box;
     // flex:0 0 auto;
   }
   .standard-block-left__container-right
   {
-    width: 94%;
+    width: 100%;
     padding: 1rem;
     box-sizing: border-box;
-    margin: 1rem;
+    // margin: 1rem;
   }
   .standard-block-left__container-left
   {
-    width: 94%;
+    width: 100%;
     padding: 1rem;
     box-sizing: border-box;
   }

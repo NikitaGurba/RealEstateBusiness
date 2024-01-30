@@ -37,7 +37,7 @@
 .card-icon-left__paragraph {
   @include normal-text-500;
   @include paragraph;
-  line-height: 150%; 
+  line-height: 150%;
 }
 .card-icon-left__header {
   display: flex;
@@ -58,17 +58,14 @@
   padding: 2.5rem;
   gap: 1.25rem;
 }
-.splide__arrow
-{
+.splide__arrow {
   display: none;
 }
 
-.splide__pagination__page
-{
+.splide__pagination__page {
   display: none;
 }
-.splide
-{
+.splide {
   width: 100%;
 }
 
@@ -81,15 +78,29 @@
   padding: 2.5rem;
   background-color: $background;
 }
+.standard-block__row-mobile {
+  width: 100%;
+  display: none;
+}
+.standard-block__row {
+  display: flex;
+}
 
 @media only screen and (max-width: 1300px) {
-  .standard-block
-  {
+  .standard-block {
     padding: 1rem;
-  }   
-  .title-with-paragraph
-  {
+  }
+  .standard-block > .title-with-paragraph {
     display: block;
     width: 100%;
+    padding-right: 0;
+  }
+  .standard-block__row-mobile {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .standard-block__row {
+    display: none;
   }
 }

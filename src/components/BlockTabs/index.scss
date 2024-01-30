@@ -1,0 +1,66 @@
+@import "../../assets/scss/main.scss";
+
+.block-tabs {
+  padding: 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 5rem;
+}
+
+.block-tabs__tabs,
+.block-tabs__cards {
+  display: flex;
+  flex-direction: row;
+}
+.block-tabs__cards {
+  gap: 2rem;
+}
+
+.block-tabs__tabs {
+  gap: 0.5rem;
+  border-radius: 0.75rem;
+  padding: 0.625rem;
+  width: fit-content;
+  background: var(--Grey-10, #1a1a1a);
+}
+
+.block-tabs__container {
+  display: flex;
+  gap: 3rem;
+  flex-direction: column;
+}
+@media only screen and (max-width: 900px) {
+  .block-tabs__cards
+  {
+    flex-direction: column;
+  }
+  .block-tabs__tabs
+  {
+    width: 100%;
+  }
+  .tab
+  {
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+  }
+  .block-tabs__container
+  {
+    gap: 1rem;
+  }
+  .block-tabs
+  {
+    gap: 1rem;
+    padding: 1rem;
+  }
+  .block-tabs__cards
+  {
+    gap: 1rem;
+    padding: 0rem;
+  }
+  .visit-card
+  {
+    padding: 1rem;
+  }
+}

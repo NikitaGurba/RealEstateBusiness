@@ -7,9 +7,14 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 body {
   background-color: $background;
   font-family: Urbanist;
-  width: 100vw;
+}
+@media only screen and (max-width: 1300px) {
+  * {
+    font-size: 0.875rem;
+  }
 }

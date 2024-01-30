@@ -3,7 +3,7 @@
 .standard-block__card {
   @include flex-start;
   @include border-625-col;
-  width: 70%;
+  width: 100%;
   padding: 2.5rem;
   justify-content: center;
   gap: 1.25rem;
@@ -13,6 +13,7 @@
   background-image: url("../../assets/svg/WideCardBackground.svg");
   background-repeat: no-repeat;
   background-size: 100% auto;
+  box-sizing: border-box;
 }
 
 .standard-block__card-container {

@@ -32,6 +32,21 @@ export const fillStandardBlockRows = (
   block: Element,
   payload: payload
 ): void => {
+
+  const mobileLayout: Element | undefined = block.getElementsByClassName(
+    "standard-block__row-mobile"
+  )[0];
+  if (mobileLayout) {
+    payload.cards.forEach((item, index) => {
+      mobileLayout.insertAdjacentHTML("beforeend", CardIconLeft);
+      changeCardIconLeft(
+        item,
+        mobileLayout.getElementsByClassName("card-icon-left")[index]
+      );
+    });
+    changeStandardBlockCard(mobileLayout, block, payload);
+  }
+  
   const rows: Array<Element> = Array.from(
     block.getElementsByClassName("standard-block__row")
   );
@@ -46,14 +61,13 @@ export const fillStandardBlockRows = (
     for (let i = 0; i < itemAmount; i++) {
       const currentCard: card | undefined = payload.cards[cardsCounter];
       if (currentElem && currentCard) {
-        const CardIconLeftLi =
-          CardIconLeft.replace(
-            '<div class="card-icon-left">',
-            '<li class="card-icon-lef-standard-block splide__slide">'
-          ).replace(
-            "</div>\n  </body>\n</html>\n",
-            "</li>\n  </body>\n</html>\n"
-          );
+        const CardIconLeftLi = CardIconLeft.replace(
+          '<div class="card-icon-left">',
+          '<li class="card-icon-lef-standard-block splide__slide">'
+        ).replace(
+          "</div>\n  </body>\n</html>\n",
+          "</li>\n  </body>\n</html>\n"
+        );
         currentElem.insertAdjacentHTML("beforeend", CardIconLeftLi);
         changeCardIconLeft(
           currentCard,

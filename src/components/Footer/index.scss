@@ -44,7 +44,7 @@
   flex: 1 0 0;
   color: $grey-60;
   font-size: 0.875rem;
-  line-height: 1.5rem; 
+  line-height: 1.5rem;
   outline: none;
   border: none;
   background-color: transparent;
@@ -114,4 +114,55 @@
   border-radius: 3.625rem;
   background: $grey-08;
   border: none;
+}
+@media only screen and (max-width: 1300px) {
+  .email-with-logo
+  {
+    width: 100%;
+  }
+  .input-field
+  {
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .input-field__icon-left
+  {
+    font-size: 1rem;
+  }
+  .link-table {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: auto auto;
+  }
+  .footer-top {
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    gap: 1rem;
+  }
+  .link-table__column {
+    height: fit-content;
+    border-bottom: 1px solid var(--Grey-15, #262626);
+    display: block;
+    padding: 1rem;
+  }
+  #services
+  {
+    order: 2;
+  }
+  .footer-bottom
+  {
+    flex-direction: column;
+  }
+  .footer-bottom__buttons-social
+  {
+    order: 1;
+  }
+  .footer-bottom__links
+  {
+    order: 2;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
 }

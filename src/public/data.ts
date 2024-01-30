@@ -1,5 +1,5 @@
 import { assetsPath } from "../constants";
-import {HeaderCardPayload, payload} from "../types/types"
+import { HeaderCardPayload, payload, blockTabs } from "../types/types";
 
 export const StandardBlock1: payload = {
   title: "Unlock Property Value",
@@ -117,5 +117,21 @@ export const HeaderCardContent: HeaderCardPayload = [
     "Elevate Your Real Estate Experience",
     "Welcome to Estatein, where your real estate aspirations meet expert guidance. Explore our comprehensive range of services, each designed to cater to your unique needs and dreams.",
   ],
-  ["title-with-paragraph__title", "title-with-paragraph__paragraph"]
-]
+  ["title-with-paragraph__title", "title-with-paragraph__paragraph"],
+];
+export const BlockTabsContent: Array<blockTabs> = [
+  {
+    type: "Main Headquarters",
+    header: "123 Estatein Plaza, City Center, Metropolis",
+    paragraph:
+      "Our main headquarters serve as the heart of Estatein. Located in the bustling city center, this is where our core team of experts operates, driving the excellence and innovation that define us.",
+    buttons: ["info@estatein.com", "+1 (123) 456-7890", "Metropolis"],
+  },
+  {
+    type: "Regional Offices",
+    header: "456 Urban Avenue, Downtown District, Metropolis",
+    paragraph:
+      "Estatein's presence extends to multiple regions, each with its own dynamic real estate landscape. Discover our regional offices, staffed by local experts who understand the nuances of their respective markets.",
+    buttons: ["info@estatein.com", "+1 (123) 456-7890", "Metropolis"],
+  },
+];

@@ -19,3 +19,10 @@ export interface payload {
 export type elem = Element | undefined;
 
 export type HeaderCardPayload = Array<Array<string>>;
+
+export type blockTabs = {
+  type: string;
+  header: string;
+  paragraph: string;
+  buttons: string[];
+};

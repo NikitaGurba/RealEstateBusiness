@@ -101,3 +101,12 @@ $white-90: #e4e4e7;
     }
   }
 }
+
+@media only screen and (max-width: 1300px) {
+
+  .title-with-paragraph {
+    display: block;
+    width: 100%;
+    padding-right: 0;
+  }
+}

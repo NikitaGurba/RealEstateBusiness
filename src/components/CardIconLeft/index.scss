@@ -3,6 +3,7 @@
 .card-icon-left {
   @include flex-start;
   @include border-625-col;
+  width: 100%;
   padding: 2.5rem;
   gap: 1.25rem;
   flex: 1 0 0;

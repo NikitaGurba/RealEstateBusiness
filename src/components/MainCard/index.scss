@@ -43,3 +43,27 @@ $background-gradient: linear-gradient(95deg, $grey-15 -26%, transparent 40%);
   @extend .title-with-paragraph;
   flex: 1 0 0;
 }
+@media only screen and (max-width: 1300px) {
+  .background-right
+  {
+    display: none;
+  }
+  .title-with-paragraph_flex1
+  {
+    flex: none;
+    padding: none;
+    width: 100%;
+    padding-right: 0;
+  }
+  .content
+  {
+    box-sizing: border-box;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+  }
+  .button-bg
+  {
+    width: 100%;
+  }
+}

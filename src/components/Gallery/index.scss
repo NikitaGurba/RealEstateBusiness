@@ -1,0 +1,67 @@
+@import "../../assets/scss/main.scss";
+
+.gallery {
+  display: flex;
+  padding: 3.75rem;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.25rem;
+  flex-shrink: 0;
+  border-radius: 0.75rem;
+  border: 1px solid var(--Grey-15, #262626);
+  background: var(--Grey-10, #1a1a1a);
+  margin: 5rem;
+  background-image: url("../../assets/svg/GalleryBg.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.gallery__grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.gallery_item {
+  width: 100%;
+  height: fit-content;
+}
+.gallery_item img {
+  width: 100%;
+}
+
+.gallery__row
+{
+  display: flex;
+  flex-direction: row;
+}
+
+.title-with-paragraph-pd
+{
+  @extend .title-with-paragraph;
+  padding-right: 0;
+}
+.gallery__grid_mobile
+{
+  @extend .gallery__grid;
+}
+
+@media only screen and (max-width: 1000px) {
+  .gallery
+  {
+    padding: 1rem;
+    gap: 2rem;
+    margin: 1rem;
+  }
+  .gallery__grid
+  {
+    gap: 0.5rem;
+  }
+  .gallery__grid_mobile
+  {
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+  }
+}
