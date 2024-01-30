@@ -8,6 +8,7 @@ $background-gradient: linear-gradient(95deg, $grey-15 -26%, transparent 40%);
   align-items: center;
   gap: 9.375rem;
   align-self: stretch;
+  box-sizing: border-box;
 }
 .container {
   background-image: $background-gradient,

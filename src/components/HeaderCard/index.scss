@@ -17,3 +17,17 @@ $background-gradient: linear-gradient(96deg, #262626 -26.82%, rgba(38, 38, 38, 0
 {
   background: $background-gradient;
 }
+
+@media only screen and (max-width: 700px) {
+  .header-card > .content
+  {
+    padding: 2rem 2rem;
+    flex: none;
+  }
+  .header-card > .content > .title-with-paragraph_flex1
+  {
+    flex: none;
+    padding: none;
+    width: 100%;
+  }
+}

@@ -1,6 +1,6 @@
 import { elem, payload, card } from "src/types/types";
 import { changeCardIconLeft } from "../CardIconLeft/index";
-import { changeStandardBlockTitleParagraph } from "../../utils/standardBlockTitleParagraph";
+import { changeTitleParagraph } from "../../utils/TitleParagraph";
 import { getLastClassElement } from "../../utils/getLastClassElement";
 const CardIconLeft = require("../CardIconLeft/index.html").default;
 const StandardBlockCard = require("../StandardBlockCard/index.html").default;
@@ -37,15 +37,41 @@ export const fillStandardBlockRows = (
   );
   let cardsCounter: number = 0;
   for (let index in rows) {
-    const currentElem: elem = rows[index];
+    const currentElem: elem =
+      Number.parseInt(index) === 0
+        ? rows[index]?.getElementsByClassName("splide__list")[0]
+        : rows[index];
     let itemAmount: number = Number.parseInt(index) === 0 ? 3 : 1;
     let renderCard: boolean = Number.parseInt(index) === 0 ? false : true;
     for (let i = 0; i < itemAmount; i++) {
       const currentCard: card | undefined = payload.cards[cardsCounter];
       if (currentElem && currentCard) {
-        currentElem.insertAdjacentHTML("beforeend", CardIconLeft);
-        changeCardIconLeft(currentCard);
+        const CardIconLeftLi =
+          CardIconLeft.replace(
+            '<div class="card-icon-left">',
+            '<li class="card-icon-lef-standard-block splide__slide">'
+          ).replace(
+            "</div>\n  </body>\n</html>\n",
+            "</li>\n  </body>\n</html>\n"
+          );
+        currentElem.insertAdjacentHTML("beforeend", CardIconLeftLi);
+        changeCardIconLeft(
+          currentCard,
+          currentElem.getElementsByClassName("splide__slide")[
+            itemAmount === 1 ? 0 : cardsCounter
+          ]
+        );
         cardsCounter++;
+        if (cardsCounter === 3) {
+          currentElem.insertAdjacentHTML("beforeend", CardIconLeftLi);
+          const firstCard: card | undefined = payload.cards[0];
+          if (firstCard) {
+            changeCardIconLeft(
+              firstCard,
+              currentElem.getElementsByClassName("splide__slide")[cardsCounter]
+            );
+          }
+        }
       }
       if (currentElem && renderCard) {
         changeStandardBlockCard(currentElem, block, payload);
@@ -57,7 +83,7 @@ export const fillStandardBlockRows = (
 export const changeStandardBlock = (payload: payload): void => {
   const block = getLastClassElement("standard-block");
   if (block) {
-    changeStandardBlockTitleParagraph(
+    changeTitleParagraph(
       block,
       [payload.title, payload.paragraph],
       ["title-with-paragraph__title", "title-with-paragraph__paragraph"]
@@ -65,3 +91,22 @@ export const changeStandardBlock = (payload: payload): void => {
     fillStandardBlockRows(block, payload);
   }
 };
+
+declare class Splide {
+  constructor(str: string | Element, obj: any);
+  mount(): void;
+}
+
+export default function StandardBlockScript(payload: payload) {
+  changeStandardBlock(payload);
+  const block = getLastClassElement("standard-block");
+  const row = block ? block.getElementsByClassName("splide")[0] : undefined;
+  if (row) {
+    new Splide(row, {
+      type: "loop",
+      autoplay: "play",
+      perPage: 3,
+      perMove: 1,
+    }).mount();
+  }
+}

@@ -44,3 +44,21 @@
   margin-top: -50px; 
   transition: all ease-in 0.5s;
 }
+@media only screen and (max-width: 500px) {
+  *{
+    font-size: 0.8rem;
+  }
+  .popup__text, .popup__text-link
+  {
+    width: fit-content;
+  }
+  .popup
+  {
+    padding: 1rem;
+    justify-content: left;
+  }
+  .popup__button
+  {
+    right: 1rem;
+  }
+}

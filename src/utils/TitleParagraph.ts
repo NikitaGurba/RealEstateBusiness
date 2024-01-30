@@ -1,6 +1,6 @@
 import {elem} from "../types/types"
 
-export const changeStandardBlockTitleParagraph = (
+export const changeTitleParagraph = (
   block: Element,
   content: string[],
   classList: string[]

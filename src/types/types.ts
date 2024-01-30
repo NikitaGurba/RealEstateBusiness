@@ -17,3 +17,5 @@ export interface payload {
 }
 
 export type elem = Element | undefined;
+
+export type HeaderCardPayload = Array<Array<string>>;

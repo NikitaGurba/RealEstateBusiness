@@ -27,14 +27,6 @@
   align-items: center;
 }
 
-.card-icon-left {
-  @include flex-start;
-  @include border-625-col;
-  padding: 2.5rem;
-  gap: 1.25rem;
-  flex: 1 0 0;
-}
-
 .card-icon-left__text {
   @include normal-text-600;
   align-self: stretch;
@@ -65,4 +57,39 @@
   width: 25rem;
   padding: 2.5rem;
   gap: 1.25rem;
+}
+.splide__arrow
+{
+  display: none;
+}
+
+.splide__pagination__page
+{
+  display: none;
+}
+.splide
+{
+  width: 100%;
+}
+
+.card-icon-lef-standard-block {
+  display: block;
+  border-radius: 0.625rem;
+  border: 1px solid $grey-15;
+  width: calc(30%);
+  margin: 1rem;
+  padding: 2.5rem;
+  background-color: $background;
+}
+
+@media only screen and (max-width: 1300px) {
+  .standard-block
+  {
+    padding: 1rem;
+  }   
+  .title-with-paragraph
+  {
+    display: block;
+    width: 100%;
+  }
 }

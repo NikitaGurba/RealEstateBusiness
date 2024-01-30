@@ -81,3 +81,23 @@ $white-90: #e4e4e7;
   @include paragraph;
   line-height: 150%;
 }
+.block-hide {
+  opacity: 0;
+}
+@media (prefers-reduced-motion: no-preference) {
+  @media (prefers-reduced-motion: no-preference) {
+    .block-animation {
+      animation: enter 1s 1;
+    }
+  }
+  @keyframes enter {
+    0% {
+      transform: translateY(-20%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0%);
+      opacity: 1;
+    }
+  }
+}

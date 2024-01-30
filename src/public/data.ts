@@ -1,5 +1,5 @@
 import { assetsPath } from "../constants";
-import {payload} from "../types/types"
+import {HeaderCardPayload, payload} from "../types/types"
 
 export const StandardBlock1: payload = {
   title: "Unlock Property Value",
@@ -111,3 +111,11 @@ export const StandardBlockLeft1: payload = {
       "Explore our Property Management Service categories and let us handle the complexities while you enjoy the benefits of property ownership.",
   },
 };
+
+export const HeaderCardContent: HeaderCardPayload = [
+  [
+    "Elevate Your Real Estate Experience",
+    "Welcome to Estatein, where your real estate aspirations meet expert guidance. Explore our comprehensive range of services, each designed to cater to your unique needs and dreams.",
+  ],
+  ["title-with-paragraph__title", "title-with-paragraph__paragraph"]
+]

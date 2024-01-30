@@ -101,3 +101,38 @@
   gap: 0.625rem;
   align-self: stretch;
 }
+@media only screen and (max-width: 1300px) {
+
+  .standard-block-left
+  {
+    padding: 0rem;
+    display: block;
+    flex: none;
+  }
+  .standard-block-left__container-row
+  {
+    flex-direction: column;
+  }   
+  .standard-block-left__card
+  {
+    // flex: none;
+    // display: block;
+    // width: 100%;
+    display: block;
+    width: 90%;
+    // flex:0 0 auto;
+  }
+  .standard-block-left__container-right
+  {
+    width: 94%;
+    padding: 1rem;
+    box-sizing: border-box;
+    margin: 1rem;
+  }
+  .standard-block-left__container-left
+  {
+    width: 94%;
+    padding: 1rem;
+    box-sizing: border-box;
+  }
+}

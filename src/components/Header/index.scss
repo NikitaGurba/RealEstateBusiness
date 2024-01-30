@@ -21,3 +21,32 @@
   align-items: center;
   gap: 1.5rem;
 }
+.more
+{
+  display: none;
+  border: none;
+  background: none;
+  width: 28px;
+height: 28px;
+}
+@media only screen and (max-width: 700px) {
+
+  .header
+  {
+    padding: 1rem;
+
+  }
+  .header__center, .header__right > .button
+  {
+    display: none;
+  }
+  .more
+  {
+    display: block;
+  }
+  .header__left, .logo-container
+  {
+    width: fit-content;
+    height: 100%;
+  }
+}

@@ -1,6 +1,6 @@
 import { elem, payload, card } from "src/types/types";
 import { changeCardIconLeft } from "../CardIconLeft/index";
-import { changeStandardBlockTitleParagraph } from "../../utils/standardBlockTitleParagraph";
+import { changeTitleParagraph } from "../../utils/TitleParagraph";
 import { getLastClassElement } from "../../utils/getLastClassElement";
 const CardIconLeft = require("../CardIconLeft/index.html").default;
 
@@ -28,7 +28,7 @@ export const fillStandardBlockLeftRows = (
 export const changeStandardBlockLeft = (payload: payload): void => {
   const block: elem = getLastClassElement("standard-block-left");
   if (block) {
-    changeStandardBlockTitleParagraph(
+    changeTitleParagraph(
       block,
       [payload.title, payload.paragraph],
       [
@@ -37,7 +37,7 @@ export const changeStandardBlockLeft = (payload: payload): void => {
       ]
     );
     fillStandardBlockLeftRows(block, payload);
-    changeStandardBlockTitleParagraph(
+    changeTitleParagraph(
       block,
       [payload.cardWithButton.title, payload.cardWithButton.paragraph],
       [
