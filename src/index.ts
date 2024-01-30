@@ -24,6 +24,7 @@ const StandardBlockLeft =
 const ContactForm = require("./components/ContactForm/index.html").default;
 const BlockTabs = require("./components/BlockTabs/index.html").default;
 const Gallery = require("./components/Gallery/index.html").default;
+const AboutHead = require("./components/AboutHead/index.html").default;
 const Footer = require("./components/Footer/index.html").default;
 
 document.body.insertAdjacentHTML("beforeend", Popup);
@@ -52,6 +53,7 @@ document.body.insertAdjacentHTML("beforeend", BlockTabs);
 BlockTabsScript(BlockTabsContent);
 
 document.body.insertAdjacentHTML("beforeend", Gallery);
+document.body.insertAdjacentHTML("beforeend", AboutHead);
 document.body.insertAdjacentHTML("beforeend", Footer);
 
 let entries: Array<Element> = Array.from(document.body.children);
