@@ -3,6 +3,7 @@ import { scrollAnimation } from "../../utils/scrollAnimation";
 import AboutValuesScript from "../../components/AboutValues";
 import AboutAchievementsScript from "../../components/AboutAchievements";
 import { AboutAchievementsContent, AboutValuesContent } from "../../public/data";
+import HeaderScript from "../../components/Header";
 
 const Popup = require("../../components/Popup/index.html").default;
 const Header = require("../../components/Header/index.html").default;
@@ -16,6 +17,7 @@ document.body.insertAdjacentHTML("beforeend", Popup);
 PopupScript();
 
 document.body.insertAdjacentHTML("beforeend", Header);
+HeaderScript();
 
 document.body.insertAdjacentHTML("beforeend", AboutHead);
 

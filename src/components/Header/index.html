@@ -1,24 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <link rel="stylesheet" href="index.scss">
+    <link rel="stylesheet" href="index.scss" />
   </head>
   <body>
     <div class="header">
       <div class="header__left">
         <div class="logo-container">
-          <img src="../../assets/svg/Logo.svg">
+          <img src="../../assets/svg/Logo.svg" />
         </div>
       </div>
       <div class="header__center">
-        <button class="text-button"><span>Home</span></button>
-        <button class="text-button"><span>About us</span></button>
-        <button class="text-button"><span>Properties</span></button>
-        <button class="button"><span>Services</span></button>
+        <a href="index.html"
+          ><button class="text-button" id="index"><span>Home</span></button></a
+        >
+        <a href="about.html"
+          ><button class="text-button" id="about">
+            <span>About us</span>
+          </button></a
+        >
+        <a href="properties.html"
+          ><button class="text-button" id="properties">
+            <span>Properties</span>
+          </button></a
+        >
+        <a href="services.html">
+          <button class="text-button" id="services">
+            <span>Services</span>
+          </button></a
+        >
       </div>
       <div class="header__right">
-        <button class="button"><span>Contact Us</span></button>
-        <button class="more"><img src="../../assets/svg/More.svg"></button>
+        <a href="contact.html">
+          <button class="button" id="contact">
+            <span>Contact Us</span>
+          </button></a
+        >
+        <button class="more"><img src="../../assets/svg/More.svg" /></button>
       </div>
     </div>
   </body>

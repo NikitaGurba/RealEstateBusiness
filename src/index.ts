@@ -1,6 +1,7 @@
 import PopupScript from "./components/Popup/index";
 import HeaderCardsScript from "./components/HeaderCards/index";
 import HeaderCardScript from "./components/HeaderCard/index";
+import HeaderScript from "./components/Header/index";
 import StandardBlockScript from "./components/StandardBlock/index";
 import { changeStandardBlockLeft } from "./components/StandardBlockLeft/index";
 import {
@@ -38,6 +39,8 @@ document.body.insertAdjacentHTML("beforeend", Popup);
 PopupScript();
 
 document.body.insertAdjacentHTML("beforeend", Header);
+HeaderScript();
+
 document.body.insertAdjacentHTML("beforeend", HeaderCard);
 HeaderCardScript(HeaderCardContent);
 

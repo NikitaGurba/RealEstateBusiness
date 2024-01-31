@@ -5,6 +5,7 @@ import MainCardScript from "../../components/MainCard/index";
 import { HeaderCardContent, BlockTabsContent, MainCardContactPageContent, HeaderCardsContactPageContent } from "../../public/data";
 import BlockTabsScript from "../../components/BlockTabs/index";
 import { scrollAnimation } from "../../utils/scrollAnimation";
+import HeaderScript from "../../components/Header";
 
 const Popup = require("../../components/Popup/index.html").default;
 const Header = require("../../components/Header/index.html").default;
@@ -20,6 +21,8 @@ document.body.insertAdjacentHTML("beforeend", Popup);
 PopupScript();
 
 document.body.insertAdjacentHTML("beforeend", Header);
+HeaderScript();
+
 document.body.insertAdjacentHTML("beforeend", HeaderCard);
 HeaderCardScript(HeaderCardContent);
 
