@@ -1,5 +1,5 @@
 import { elem, payload, card } from "src/types/types";
-import { changeCardIconLeft } from "../CardIconLeft/index";
+import { CardIconLeftScript } from "../CardIconLeft/index";
 import { changeTitleParagraph } from "../../utils/TitleParagraph";
 import { getLastClassElement } from "../../utils/getLastClassElement";
 const CardIconLeft = require("../CardIconLeft/index.html").default;
@@ -39,7 +39,7 @@ export const fillStandardBlockRows = (
   if (mobileLayout) {
     payload.cards.forEach((item, index) => {
       mobileLayout.insertAdjacentHTML("beforeend", CardIconLeft);
-      changeCardIconLeft(
+      CardIconLeftScript(
         item,
         mobileLayout.getElementsByClassName("card-icon-left")[index]
       );
@@ -69,7 +69,7 @@ export const fillStandardBlockRows = (
           "</li>\n  </body>\n</html>\n"
         );
         currentElem.insertAdjacentHTML("beforeend", CardIconLeftLi);
-        changeCardIconLeft(
+        CardIconLeftScript(
           currentCard,
           currentElem.getElementsByClassName("splide__slide")[
             itemAmount === 1 ? 0 : cardsCounter
@@ -80,7 +80,7 @@ export const fillStandardBlockRows = (
           currentElem.insertAdjacentHTML("beforeend", CardIconLeftLi);
           const firstCard: card | undefined = payload.cards[0];
           if (firstCard) {
-            changeCardIconLeft(
+            CardIconLeftScript(
               firstCard,
               currentElem.getElementsByClassName("splide__slide")[cardsCounter]
             );

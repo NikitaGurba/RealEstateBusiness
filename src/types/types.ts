@@ -26,3 +26,5 @@ export type blockTabs = {
   paragraph: string;
   buttons: string[];
 };
+
+export type aboutValuesPayload = Array<card>

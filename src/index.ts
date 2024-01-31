@@ -11,8 +11,9 @@ import {
   BlockTabsContent,
 } from "./public/data";
 import { throttle } from "./utils/throttle";
-import BlockTabsScript from "./components/BlockTabs/index"
-
+import AboutValuesScript from "./components/AboutValues/index";
+import BlockTabsScript from "./components/BlockTabs/index";
+import { assetsPath } from "./constants";
 const Popup = require("./components/Popup/index.html").default;
 const Header = require("./components/Header/index.html").default;
 const HeaderCards = require("./components/HeaderCards/index.html").default;
@@ -25,7 +26,35 @@ const ContactForm = require("./components/ContactForm/index.html").default;
 const BlockTabs = require("./components/BlockTabs/index.html").default;
 const Gallery = require("./components/Gallery/index.html").default;
 const AboutHead = require("./components/AboutHead/index.html").default;
+const AboutValues = require("./components/AboutValues/index.html").default;
 const Footer = require("./components/Footer/index.html").default;
+
+const AboutValuesContent = [
+  {
+    src: assetsPath + "PlainStar.svg",
+    title: "Trust",
+    paragraph:
+      "Trust is the cornerstone of every successful real estate transaction.",
+  },
+  {
+    src: assetsPath + "PlainHat.svg",
+    title: "Excellence",
+    paragraph:
+      "We set the bar high for ourselves. From the properties we list to the services we provide.",
+  },
+  {
+    src: assetsPath + "PlainGroup.svg",
+    title: "Client-Centric",
+    paragraph:
+      "Your dreams and needs are at the center of our universe. We listen, understand.",
+  },
+  {
+    src: assetsPath + "PlainStar.svg",
+    title: "Our Commitment",
+    paragraph:
+      "We are dedicated to providing you with the highest level of service, professionalism, and support.",
+  },
+];
 
 document.body.insertAdjacentHTML("beforeend", Popup);
 PopupScript();
@@ -54,6 +83,10 @@ BlockTabsScript(BlockTabsContent);
 
 document.body.insertAdjacentHTML("beforeend", Gallery);
 document.body.insertAdjacentHTML("beforeend", AboutHead);
+
+document.body.insertAdjacentHTML("beforeend", AboutValues);
+AboutValuesScript(AboutValuesContent);
+
 document.body.insertAdjacentHTML("beforeend", Footer);
 
 let entries: Array<Element> = Array.from(document.body.children);

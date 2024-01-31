@@ -1,6 +1,6 @@
 import { elem, card } from "../../types/types";
 
-export const changeCardIconLeft = (data: card, element?: any): void => {
+export const CardIconLeftScript = (data: card, element?: any): void => {
   let arrayOfCards: HTMLCollection,
     card: elem,
     imgElem: HTMLImageElement | undefined,

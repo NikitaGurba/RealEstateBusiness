@@ -1,5 +1,5 @@
 import { elem, payload, card } from "src/types/types";
-import { changeCardIconLeft } from "../CardIconLeft/index";
+import { CardIconLeftScript } from "../CardIconLeft/index";
 import { changeTitleParagraph } from "../../utils/TitleParagraph";
 import { getLastClassElement } from "../../utils/getLastClassElement";
 const CardIconLeft = require("../CardIconLeft/index.html").default;
@@ -18,7 +18,7 @@ export const fillStandardBlockLeftRows = (
       const currentCard: card | undefined = payload.cards[cardsCounter];
       if (currentElem && currentCard) {
         currentElem.insertAdjacentHTML("beforeend", CardIconLeft);
-        changeCardIconLeft(currentCard);
+        CardIconLeftScript(currentCard);
         cardsCounter++;
       }
     }
