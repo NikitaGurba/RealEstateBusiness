@@ -1,0 +1,50 @@
+@import "../../assets/scss/main.scss";
+
+.step-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.step-card__main {
+  display: flex;
+  padding: 3rem;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.25rem;
+  align-self: stretch;
+  flex: 1 0 0;
+  border-radius: 0rem 0.75rem 0.75rem 0.75rem;
+  border: 0.1rem solid #262626;
+  background: linear-gradient(
+    121deg,
+    #703bf7 -49.01%,
+    rgba(112, 59, 247, 0) 13.65%
+  );
+}
+
+.step-card__header {
+  @extend .title-with-paragraph__title;
+  font-size: 1.625rem;
+}
+
+.step-card__paragraph {
+  @extend .title-with-paragraph__paragraph;
+  font-size: 1.125rem;
+}
+
+.step-card__step {
+  display: flex;
+  padding: 1rem 1.25rem;
+  justify-content: left;
+  gap: 0.625rem;
+  align-self: stretch;
+  border-left: 1px solid var(--Purple-60, #703bf7);
+}
+
+.step-card__step span {
+  width: 100%;
+  font-size: 1.25rem;
+  font-weight: 500;
+  text-align: left;
+}

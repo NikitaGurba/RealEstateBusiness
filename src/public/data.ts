@@ -1,5 +1,13 @@
 import { assetsPath } from "../constants";
-import { HeaderCardPayload, payload, blockTabs, AboutAchievementsType, MainCardType, HeaderCardType } from "../types/types";
+import {
+  HeaderCardPayload,
+  payload,
+  blockTabs,
+  AboutAchievementsType,
+  MainCardType,
+  HeaderCardType,
+  StepBlockType
+} from "../types/types";
 
 export const StandardBlock1: payload = {
   title: "Unlock Property Value",
@@ -190,45 +198,91 @@ export const AboutAchievementsContent: AboutAchievementsType = {
 
 export const MainCardContactPageContent: MainCardType = {
   header: "Start Your Real Estate Journey Today",
-  paragraph: "Your dream property is just a click away. Whether you're looking for a new home, a strategic investment, or expert real estate advice, Estatein is here to assist you every step of the way. Take the first step towards your real estate goals and explore our available properties or get in touch with our team for personalized assistance.",
+  paragraph:
+    "Your dream property is just a click away. Whether you're looking for a new home, a strategic investment, or expert real estate advice, Estatein is here to assist you every step of the way. Take the first step towards your real estate goals and explore our available properties or get in touch with our team for personalized assistance.",
   button: "Explore Properties",
-}
+};
 
 export const HeaderCardsServicesPageContent: Array<HeaderCardType> = [
   {
     src: assetsPath + "Store.svg",
-    header: "Find Your Dream Home" 
+    header: "Find Your Dream Home",
   },
   {
     src: assetsPath + "Value.svg",
-    header: "Unlock Property Value" 
+    header: "Unlock Property Value",
   },
   {
     src: assetsPath + "Building.svg",
-    header: "Effortless Property Management"
+    header: "Effortless Property Management",
   },
   {
     src: assetsPath + "Sun.svg",
-    header: "Smart Investments, Informed Decisions"
+    header: "Smart Investments, Informed Decisions",
   },
-]
-
+];
 
 export const HeaderCardsContactPageContent: Array<HeaderCardType> = [
   {
     src: assetsPath + "RoundMail.svg",
-    header: "info@estatein.com" 
+    header: "info@estatein.com",
   },
   {
     src: assetsPath + "RoundPhone.svg",
-    header: "+1 (123) 456-7890" 
+    header: "+1 (123) 456-7890",
   },
   {
     src: assetsPath + "RoundGeo.svg",
-    header: "Main Headquarters"
+    header: "Main Headquarters",
   },
   {
     src: assetsPath + "Fire.svg",
-    header: "Instagram LinkedIn Facebook"
+    header: "Instagram LinkedIn Facebook",
   },
-]
+];
+
+export const StepBlockAboutPageContent: StepBlockType = {
+  titleParagraph: {
+    header: "Navigating the Estatein Experience",
+    paragraph:
+      "At Estatein, we've designed a straightforward process to help you find and purchase your dream property with ease. Here's a step-by-step guide to how it all works.",
+  },
+  cards: [
+    {
+      step: 1,
+      header: "Discover a World of Possibilities",
+      paragraph:
+        "Your journey begins with exploring our carefully curated property listings. Use our intuitive search tools to filter properties based on your preferences, including location, type, size, and budget.",
+    },
+    {
+      step: 2,
+      header: "Narrowing Down Your Choices",
+      paragraph:
+        "Once you've found properties that catch your eye, save them to your account or make a shortlist. This allows you to compare and revisit your favorites as you make your decision.",
+    },
+    {
+      step: 3,
+      header: "Personalized Guidance",
+      paragraph:
+        "Have questions about a property or need more information? Our dedicated team of real estate experts is just a call or message away.",
+    },
+    {
+      step: 4,
+      header: "See It for Yourself",
+      paragraph:
+        "Arrange viewings of the properties you're interested in. We'll coordinate with the property owners and accompany you to ensure you get a firsthand look at your potential new home.",
+    },
+    {
+      step: 5,
+      header: "Making Informed Decisions",
+      paragraph:
+        "Before making an offer, our team will assist you with due diligence, including property inspections, legal checks, and market analysis. We want you to be fully informed and confident in your choice.",
+    },
+    {
+      step: 6,
+      header: "Getting the Best Deal",
+      paragraph:
+        "We'll help you negotiate the best terms and prepare your offer. Our goal is to secure the property at the right price and on favorable terms.",
+    },
+  ],
+};

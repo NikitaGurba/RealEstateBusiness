@@ -40,12 +40,22 @@ export type AboutAchievementsType = {
 };
 
 export type MainCardType = {
-  header: string,
-  paragraph: string,
-  button: string
-}
+  header: string;
+  paragraph: string;
+  button: string;
+};
 
 export type HeaderCardType = {
-  header: string,
-  src: string
-}
+  header: string;
+  src: string;
+};
+export type StepCardType = {
+  step: number;
+  header: string;
+  paragraph: string;
+};
+
+export type StepBlockType = {
+  titleParagraph: TitleParagraph;
+  cards: Array<StepCardType>;
+};

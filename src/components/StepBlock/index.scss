@@ -1,0 +1,44 @@
+@import "../../assets/scss/main.scss";
+
+.step-block
+{
+  display: flex;
+  gap: 5rem;
+  flex-direction: column;
+  padding: 10rem;
+}
+
+.step-block__cards
+{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 1fr;
+  gap: 2rem;
+}
+@media only screen and (max-width: 1300px) {
+  .step-block
+  {
+    padding: 5rem;
+  }
+  .step-block__cards
+  {
+    gap: 1rem;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .step-block
+  {
+    padding: 1rem;
+    gap: 2rem;
+  }
+  .step-block__cards
+  {
+    gap: 1rem;
+    display: flex;
+    flex-direction: column;
+  }
+  .step-card:nth-child(n+4) {
+    display:none;
+ }
+}

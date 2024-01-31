@@ -13,6 +13,7 @@ import {
   AboutValuesContent,
   AboutAchievementsContent,
   HeaderCardsServicesPageContent,
+  StepBlockAboutPageContent,
 } from "./public/data";
 import AboutValuesScript from "./components/AboutValues/index";
 import BlockTabsScript from "./components/BlockTabs/index";
@@ -35,11 +36,21 @@ const AboutAchievements =
   require("./components/AboutAchievements/index.html").default;
 const Footer = require("./components/Footer/index.html").default;
 
+const StepBlock = require("./components/StepBlock/index.html").default;
+const EmployeeCard = require("./components/EmployeeCard/index.html").default;
+
+import StepBlockScript from "./components/StepBlock/index";
+
 document.body.insertAdjacentHTML("beforeend", Popup);
 PopupScript();
 
 document.body.insertAdjacentHTML("beforeend", Header);
 HeaderScript();
+
+document.body.insertAdjacentHTML("beforeend", EmployeeCard);
+
+document.body.insertAdjacentHTML("beforeend", StepBlock);
+StepBlockScript(StepBlockAboutPageContent);
 
 document.body.insertAdjacentHTML("beforeend", HeaderCard);
 HeaderCardScript(HeaderCardContent);
