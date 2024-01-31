@@ -135,3 +135,30 @@ export const BlockTabsContent: Array<blockTabs> = [
     buttons: ["info@estatein.com", "+1 (123) 456-7890", "Metropolis"],
   },
 ];
+
+export const AboutValuesContent = [
+  {
+    src: assetsPath + "PlainStar.svg",
+    title: "Trust",
+    paragraph:
+      "Trust is the cornerstone of every successful real estate transaction.",
+  },
+  {
+    src: assetsPath + "PlainHat.svg",
+    title: "Excellence",
+    paragraph:
+      "We set the bar high for ourselves. From the properties we list to the services we provide.",
+  },
+  {
+    src: assetsPath + "PlainGroup.svg",
+    title: "Client-Centric",
+    paragraph:
+      "Your dreams and needs are at the center of our universe. We listen, understand.",
+  },
+  {
+    src: assetsPath + "PlainStar.svg",
+    title: "Our Commitment",
+    paragraph:
+      "We are dedicated to providing you with the highest level of service, professionalism, and support.",
+  },
+];

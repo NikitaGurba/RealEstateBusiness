@@ -27,4 +27,14 @@ export type blockTabs = {
   buttons: string[];
 };
 
-export type aboutValuesPayload = Array<card>
+export type aboutValuesPayload = Array<card>;
+
+export type TitleParagraph = {
+  header: string;
+  paragraph: string;
+};
+
+export type AboutAchievementsContent = {
+  titleParagraph: TitleParagraph;
+  cards: Array<TitleParagraph>;
+};

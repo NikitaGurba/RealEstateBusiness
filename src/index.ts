@@ -9,11 +9,13 @@ import {
   StandardBlockLeft1,
   HeaderCardContent,
   BlockTabsContent,
+  AboutValuesContent,
 } from "./public/data";
-import { throttle } from "./utils/throttle";
 import AboutValuesScript from "./components/AboutValues/index";
 import BlockTabsScript from "./components/BlockTabs/index";
-import { assetsPath } from "./constants";
+import { scrollAnimation } from "./utils/scrollAnimation";
+import AboutAchievementsScript from "./components/AboutAchievements/index";
+import { AboutAchievementsContent } from "./types/types";
 const Popup = require("./components/Popup/index.html").default;
 const Header = require("./components/Header/index.html").default;
 const HeaderCards = require("./components/HeaderCards/index.html").default;
@@ -27,34 +29,34 @@ const BlockTabs = require("./components/BlockTabs/index.html").default;
 const Gallery = require("./components/Gallery/index.html").default;
 const AboutHead = require("./components/AboutHead/index.html").default;
 const AboutValues = require("./components/AboutValues/index.html").default;
+const AboutAchievements =
+  require("./components/AboutAchievements/index.html").default;
 const Footer = require("./components/Footer/index.html").default;
 
-const AboutValuesContent = [
-  {
-    src: assetsPath + "PlainStar.svg",
-    title: "Trust",
+const AboutAchievementsContent: AboutAchievementsContent = {
+  titleParagraph: {
+    header: "Our Achievements",
     paragraph:
-      "Trust is the cornerstone of every successful real estate transaction.",
+      "Our story is one of continuous growth and evolution. We started as a small team with big dreams, determined to create a real estate platform that transcended the ordinary.",
   },
-  {
-    src: assetsPath + "PlainHat.svg",
-    title: "Excellence",
-    paragraph:
-      "We set the bar high for ourselves. From the properties we list to the services we provide.",
-  },
-  {
-    src: assetsPath + "PlainGroup.svg",
-    title: "Client-Centric",
-    paragraph:
-      "Your dreams and needs are at the center of our universe. We listen, understand.",
-  },
-  {
-    src: assetsPath + "PlainStar.svg",
-    title: "Our Commitment",
-    paragraph:
-      "We are dedicated to providing you with the highest level of service, professionalism, and support.",
-  },
-];
+  cards: [
+    {
+      header: "3+ Years of Excellence",
+      paragraph:
+        "With over 3 years in the industry, we've amassed a wealth of knowledge and experience, becoming a go-to resource for all things real estate.",
+    },
+    {
+      header: "Happy Clients",
+      paragraph:
+        "Our greatest achievement is the satisfaction of our clients. Their success stories fuel our passion for what we do.",
+    },
+    {
+      header: "Industry Recognition",
+      paragraph:
+        "We've earned the respect of our peers and industry leaders, with accolades and awards that reflect our commitment to excellence.",
+    },
+  ],
+};
 
 document.body.insertAdjacentHTML("beforeend", Popup);
 PopupScript();
@@ -87,42 +89,9 @@ document.body.insertAdjacentHTML("beforeend", AboutHead);
 document.body.insertAdjacentHTML("beforeend", AboutValues);
 AboutValuesScript(AboutValuesContent);
 
+document.body.insertAdjacentHTML("beforeend", AboutAchievements);
+AboutAchievementsScript(AboutAchievementsContent);
+
 document.body.insertAdjacentHTML("beforeend", Footer);
 
-let entries: Array<Element> = Array.from(document.body.children);
-entries = entries.filter(
-  (item) =>
-    !(item instanceof HTMLScriptElement || item instanceof HTMLLinkElement)
-);
-entries.forEach((element, index) => {
-  element.className += " block";
-  if (index > 3) {
-    element.className += " block-hide";
-  }
-});
-
-const handleScrollAnimation = (): void => {
-  entries.forEach((element) => {
-    if (isInViewport(element)) {
-      if (element.className.includes("block-hide")) {
-        element.className = element.className.replace(
-          "block-hide",
-          "block-animation"
-        );
-      }
-    }
-  });
-};
-function isInViewport(element: Element): boolean {
-  const rect: DOMRect = element.getBoundingClientRect();
-  return (
-    rect.left >= 0 &&
-    rect.bottom <=
-      (window.innerHeight || document.documentElement.clientHeight) + 100 &&
-    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-  );
-}
-let func = throttle(handleScrollAnimation, 100);
-window.addEventListener("scroll", (): void => {
-  func();
-});
+scrollAnimation();

@@ -33,7 +33,7 @@ export const fillStandardBlockRows = (
   payload: payload
 ): void => {
 
-  const mobileLayout: Element | undefined = block.getElementsByClassName(
+  const mobileLayout: elem = block.getElementsByClassName(
     "standard-block__row-mobile"
   )[0];
   if (mobileLayout) {

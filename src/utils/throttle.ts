@@ -1,4 +1,4 @@
-export const throttle = (func: () => void, limit: number): (() => void) => {
+export const throttle = (func: () => any, limit: number): (() => void) => {
   let inThrottle: boolean;
   return () => {
     if (!inThrottle) {

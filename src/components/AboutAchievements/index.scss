@@ -1,0 +1,35 @@
+@import "../../assets/scss/main.scss";
+
+.about-achievements
+{
+  display: flex;
+  gap: 5rem;
+  flex-direction: column;
+  padding: 10rem;
+}
+
+.about-achievements__cards
+{
+  display: flex;
+  flex-direction: row;
+  gap: 2.5rem;
+}
+
+@media only screen and (max-width: 1300px) {
+  .about-achievements
+  {
+    padding: 5rem;
+  }
+}
+@media only screen and (max-width: 1000px) {
+  .about-achievements
+  {
+    padding: 2rem;
+    gap: 2rem;
+  }
+  .about-achievements__cards
+  {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
