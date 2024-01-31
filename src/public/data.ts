@@ -1,5 +1,5 @@
 import { assetsPath } from "../constants";
-import { HeaderCardPayload, payload, blockTabs } from "../types/types";
+import { HeaderCardPayload, payload, blockTabs, AboutAchievementsType, MainCardType, HeaderCardType } from "../types/types";
 
 export const StandardBlock1: payload = {
   title: "Unlock Property Value",
@@ -162,3 +162,73 @@ export const AboutValuesContent = [
       "We are dedicated to providing you with the highest level of service, professionalism, and support.",
   },
 ];
+
+export const AboutAchievementsContent: AboutAchievementsType = {
+  titleParagraph: {
+    header: "Our Achievements",
+    paragraph:
+      "Our story is one of continuous growth and evolution. We started as a small team with big dreams, determined to create a real estate platform that transcended the ordinary.",
+  },
+  cards: [
+    {
+      header: "3+ Years of Excellence",
+      paragraph:
+        "With over 3 years in the industry, we've amassed a wealth of knowledge and experience, becoming a go-to resource for all things real estate.",
+    },
+    {
+      header: "Happy Clients",
+      paragraph:
+        "Our greatest achievement is the satisfaction of our clients. Their success stories fuel our passion for what we do.",
+    },
+    {
+      header: "Industry Recognition",
+      paragraph:
+        "We've earned the respect of our peers and industry leaders, with accolades and awards that reflect our commitment to excellence.",
+    },
+  ],
+};
+
+export const MainCardContactPageContent: MainCardType = {
+  header: "Start Your Real Estate Journey Today",
+  paragraph: "Your dream property is just a click away. Whether you're looking for a new home, a strategic investment, or expert real estate advice, Estatein is here to assist you every step of the way. Take the first step towards your real estate goals and explore our available properties or get in touch with our team for personalized assistance.",
+  button: "Explore Properties",
+}
+
+export const HeaderCardsServicesPageContent: Array<HeaderCardType> = [
+  {
+    src: assetsPath + "Store.svg",
+    header: "Find Your Dream Home" 
+  },
+  {
+    src: assetsPath + "Value.svg",
+    header: "Unlock Property Value" 
+  },
+  {
+    src: assetsPath + "Building.svg",
+    header: "Effortless Property Management"
+  },
+  {
+    src: assetsPath + "Sun.svg",
+    header: "Smart Investments, Informed Decisions"
+  },
+]
+
+
+export const HeaderCardsContactPageContent: Array<HeaderCardType> = [
+  {
+    src: assetsPath + "RoundMail.svg",
+    header: "info@estatein.com" 
+  },
+  {
+    src: assetsPath + "RoundPhone.svg",
+    header: "+1 (123) 456-7890" 
+  },
+  {
+    src: assetsPath + "RoundGeo.svg",
+    header: "Main Headquarters"
+  },
+  {
+    src: assetsPath + "Fire.svg",
+    header: "Instagram LinkedIn Facebook"
+  },
+]

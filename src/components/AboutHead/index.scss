@@ -63,12 +63,13 @@
 }
 
 
+
 @media only screen and (max-width: 1300px) {
   .about-head 
   {
     display: flex;
     flex-direction: column;
-    padding: 1rem;
+    padding: 5rem;
     gap: 2rem;
   }
   .about-head__left 
@@ -84,5 +85,12 @@
   .about-head__card
   {
     flex: 1 0 0;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .about-head
+  {
+    padding: 1rem;
   }
 }

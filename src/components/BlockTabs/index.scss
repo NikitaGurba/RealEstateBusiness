@@ -30,6 +30,13 @@
   gap: 3rem;
   flex-direction: column;
 }
+@media only screen and (max-width: 1300px) {
+  .block-tabs
+  {
+    padding: 5rem;
+  }
+}
+
 @media only screen and (max-width: 900px) {
   .block-tabs__cards
   {

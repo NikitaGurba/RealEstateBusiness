@@ -1,4 +1,4 @@
-import { AboutAchievementsContent, elem } from "../../types/types";
+import { AboutAchievementsType, elem } from "../../types/types";
 import { getLastClassElement } from "../../utils/getLastClassElement";
 import TitleParagraphScript from "../TitleParagraph/index";
 import GenericCardScript from "../GenericCard/index";
@@ -6,7 +6,7 @@ import GenericCardScript from "../GenericCard/index";
 const TitleParagraph = require("../TitleParagraph/index.html").default;
 const GenericCard = require("../GenericCard/index.html").default;
 export default function AboutAchievementsScript(
-  payload: AboutAchievementsContent
+  payload: AboutAchievementsType
 ) {
   const block: elem = getLastClassElement("about-achievements");
   if (block) {

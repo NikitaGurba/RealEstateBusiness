@@ -5,16 +5,18 @@ const path = require("path");
 require("dotenv").config();
 
 module.exports = {
-  entry: [
-    "./src/index.ts",
-    "./src/assets/scss/main.scss",
-    "./src/assets/scss/root.scss",
-  ],
+  entry: {
+    main: ["./src/index.ts"],
+    contact: ["./src/pages/Contact/index.ts"],
+    about: ["./src/pages/About/index.ts"],
+    style: ["./src/assets/scss/main.scss", "./src/assets/scss/root.scss"],
+  },
   mode: process.env.APP_MODE,
   devtool: "inline-source-map",
   module: {
     rules: [
       {
+        exclude: path.resolve(__dirname, 'style.css'),
         test: /\.s?css$/,
         use: [
           {
@@ -37,14 +39,20 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      // inject: true,
-      // scriptLoading: 'systemjs-module',
       template: "index.html",
+      chunks: ["main", "style"],
     }),
-    new MiniCssExtractPlugin({
-      filename: "style.css",
-      chunkFilename: "[id].css",
+    new HtmlWebpackPlugin({
+      filename: "contact.html",
+      template: "./src/pages/Contact/index.html",
+      chunks: ["contact", "style"],
     }),
+    new HtmlWebpackPlugin({
+      filename: "about.html",
+      template: "./src/pages/About/index.html",
+      chunks: ["about", "style"],
+    }),
+    new MiniCssExtractPlugin({}),
     new CopyWebpackPlugin({
       patterns: [{ from: "src/assets/svg", to: "assets" }],
     }),

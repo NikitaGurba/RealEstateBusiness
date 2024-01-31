@@ -10,12 +10,13 @@ import {
   HeaderCardContent,
   BlockTabsContent,
   AboutValuesContent,
+  AboutAchievementsContent,
+  HeaderCardsServicesPageContent,
 } from "./public/data";
 import AboutValuesScript from "./components/AboutValues/index";
 import BlockTabsScript from "./components/BlockTabs/index";
 import { scrollAnimation } from "./utils/scrollAnimation";
 import AboutAchievementsScript from "./components/AboutAchievements/index";
-import { AboutAchievementsContent } from "./types/types";
 const Popup = require("./components/Popup/index.html").default;
 const Header = require("./components/Header/index.html").default;
 const HeaderCards = require("./components/HeaderCards/index.html").default;
@@ -33,31 +34,6 @@ const AboutAchievements =
   require("./components/AboutAchievements/index.html").default;
 const Footer = require("./components/Footer/index.html").default;
 
-const AboutAchievementsContent: AboutAchievementsContent = {
-  titleParagraph: {
-    header: "Our Achievements",
-    paragraph:
-      "Our story is one of continuous growth and evolution. We started as a small team with big dreams, determined to create a real estate platform that transcended the ordinary.",
-  },
-  cards: [
-    {
-      header: "3+ Years of Excellence",
-      paragraph:
-        "With over 3 years in the industry, we've amassed a wealth of knowledge and experience, becoming a go-to resource for all things real estate.",
-    },
-    {
-      header: "Happy Clients",
-      paragraph:
-        "Our greatest achievement is the satisfaction of our clients. Their success stories fuel our passion for what we do.",
-    },
-    {
-      header: "Industry Recognition",
-      paragraph:
-        "We've earned the respect of our peers and industry leaders, with accolades and awards that reflect our commitment to excellence.",
-    },
-  ],
-};
-
 document.body.insertAdjacentHTML("beforeend", Popup);
 PopupScript();
 
@@ -66,7 +42,7 @@ document.body.insertAdjacentHTML("beforeend", HeaderCard);
 HeaderCardScript(HeaderCardContent);
 
 document.body.insertAdjacentHTML("beforeend", HeaderCards);
-HeaderCardsScript();
+HeaderCardsScript(HeaderCardsServicesPageContent);
 
 document.body.insertAdjacentHTML("beforeend", StandardBlock);
 StandardBlockScript(StandardBlock1);

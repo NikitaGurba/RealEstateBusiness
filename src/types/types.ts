@@ -34,7 +34,18 @@ export type TitleParagraph = {
   paragraph: string;
 };
 
-export type AboutAchievementsContent = {
+export type AboutAchievementsType = {
   titleParagraph: TitleParagraph;
   cards: Array<TitleParagraph>;
 };
+
+export type MainCardType = {
+  header: string,
+  paragraph: string,
+  button: string
+}
+
+export type HeaderCardType = {
+  header: string,
+  src: string
+}

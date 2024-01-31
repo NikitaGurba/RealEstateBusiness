@@ -10,7 +10,7 @@ $background-gradient: linear-gradient(95deg, $grey-15 -26%, transparent 40%);
   align-self: stretch;
   box-sizing: border-box;
 }
-.container {
+.main-card {
   background-image: $background-gradient,
     url("../../assets/svg/DiagonalRectangles.svg");
   background-size: contain;
@@ -30,15 +30,6 @@ $background-gradient: linear-gradient(95deg, $grey-15 -26%, transparent 40%);
   transform: scaleX(-1);
 }
 
-.button-bg {
-  @extend .button;
-  padding: 0.875rem 1.25rem;
-  justify-content: center;
-  align-items: center;
-  gap: 0.5rem;
-  border-radius: 0.5rem;
-  background: $purple-60;
-}
 .title-with-paragraph_flex1 {
   @extend .title-with-paragraph;
   flex: 1 0 0;
